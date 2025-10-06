@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Survey</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/translater.js/1.0.12/translater.min.js" integrity="sha512-lVd8Ov3O+4Ubc0HN0IKhjbP4nOg7MDoQORI2tpkWSdRr3440zt31uR+lgO9QNDGrBUjq/hcsMjQDVux/02142w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="17fa0118-e904-4b0c-862e-21951e7e86ec"></script>
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
+
+        body {
+            margin: 0px;
+            background-color: #F6F6F6;
+            font-family: 'Cascadia Code', system-ui;
+        }
+
+        input[type=radio] {
+            appearance: none;
+            -webkit-appearance: none;
+            transition: linear 100ms;
+        }
+
+        input[type=radio] + label {
+            float: left;
+            width: auto;
+            height: 40px;
+            border: solid 1px #ABABAB;
+            border-radius: 40px;
+            cursor: pointer;
+            color: #ABABAB;
+            font-weight: 400;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type=radio]:checked + label {
+            border: solid 1px #318EFF;
+            color: #318EFF;
+        }
+
+        input[type=checkbox] {
+            appearance: none;
+            -webkit-appearance: none;
+            transition: linear 100ms;
+        }
+
+        input[type=checkbox] + label {
+            float: left;
+            width: auto;
+            height: 40px;
+            border: solid 1px #ABABAB;
+            border-radius: 40px;
+            cursor: pointer;
+            color: #ABABAB;
+            font-weight: 400;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type=checkbox]:checked + label {
+            border: solid 1px #318EFF;
+            color: #318EFF;
+        }
+
+        input[type=text] {
+            float: left;
+            width: 100%;
+            height: 44px;
+            border: solid 1px #ABABAB;
+            border-radius: 20px;
+            color: #000000;
+            font-weight: 400;
+            outline: none;
+            font-size: 17px;
+            padding-left: 10px;
+            font-family: "Cascadia Code", system-ui;
+            transition: linear 100ms;
+            box-sizing: border-box;
+            background: transparent;
+        }
+
+        input[type=text]:focus {
+            border: solid 2px #318EFF;
+        }
+
+        input[type=email] {
+            float: left;
+            width: 100%;
+            height: 44px;
+            border: solid 1px #ABABAB;
+            border-radius: 20px;
+            color: #000000;
+            font-weight: 400;
+            outline: none;
+            font-size: 17px;
+            padding-left: 10px;
+            font-family: "Cascadia Code", system-ui;
+            transition: linear 100ms;
+            box-sizing: border-box;
+            background: transparent;
+        }
+
+        input[type=email]:focus {
+            border: solid 2px #318EFF;
+        }
+
+        button[type=submit] {
+            float: right;
+            width: auto;
+            height: 40px;
+            position: relative;
+            top: -70px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 40px;
+            background: #318EFF;
+            color: #FFFFFF;
+            font-family: "Cascadia Code", system-ui;
+            font-weight: 500;
+            padding-left: 10px;
+            padding-right: 10px;
+            transition: linear 100ms;
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+
+        button[type=submit]:disabled {
+            background: #ABABAB;
+            cursor: not-allowed;
+        }
+
+        .container {
+            background: #FFFFFF;
+        }
+
+        .cont2 {
+            background: #F6F6F6;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #151515;
+                color: #F6F6F6;
+            }
+
+            .container {
+                background: #222222;
+            }
+
+            .cont2 {
+                background: #151515;
+            }
+
+            input[type=text], input[type=email] {
+                color: #F6F6F6;
+            }
+
+            button[type=submit]:disabled {
+                background: #353535;
+            }
+        }
+    </style>
+    <body>
+        <form name="metrosurvey" action="https://script.google.com/macros/s/AKfycbxPnL81ZIPWwyyKMjk9hvlkBNd5_FjNmycp3TUNvgSDBUktmcO_kJri1pjMLXtQ1NRm/exec">
+            <center>
+                <div class="container" style="width: calc(100% - 40px); max-width: 710px; border-radius: 20px; overflow: hidden; height: auto; margin-top: 20px;">
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h2>
+                            Research experiment for viability of a mobile app 
+                            <!--{ca}Experiment de recerca per a la viabilitat d'una aplicació mòbil--><!--{da}Forskningseksperiment for levedygtigheden af ​​en mobilapp--><!--{de}Forschungsexperiment zur Realisierbarkeit einer mobilen App--><!--{es}Experimento de investigación sobre la viabilidad de una aplicación móvil--><!--{fr}Expérience de recherche sur la viabilité d'une application mobile--><!--{mi}Nga whakamatautau rangahau mo te oranga o te taupānga waea--><!--{nl}Onderzoeksexperiment naar de levensvatbaarheid van een mobiele app--><!--{nb}Forskningseksperiment for levedyktigheten til en mobilapp--><!--{pt}Experimento de pesquisa para viabilidade de um aplicativo móvel--><!--{fi}Tutkimuskoe mobiilisovelluksen elinkelpoisuudesta--><!--{sv}Forskningsexperiment för att undersöka en mobilapps lönsamhet--><!--{el}Ερευνητικό πείραμα για τη βιωσιμότητα μιας εφαρμογής για κινητά--><!--{yu}研究流動應用程式嘅可行性嘅實驗--><!--{ja}モバイルアプリの実現可能性に関する研究実験--><!--{kr}모바일 앱의 실행 가능성을 위한 연구 실험-->
+                        </h2>
+                        <p>
+                            Hello there! Thank you for stopping by and taking the time to answer this survey. I'm conducting a research experiment for an application I'm developing, and I would like to hear your thoughts on some basic social media topics. 
+                            <!--{ca}Hola! Gràcies per passar-te i prendre't el temps de respondre aquesta enquesta. Estic duent a terme un experiment de recerca per a una aplicació que estic desenvolupant i m'agradaria saber la teva opinió sobre alguns temes bàsics de les xarxes socials.--><!--{da}Hej! Tak fordi du kiggede forbi og tog dig tid til at besvare denne undersøgelse. Jeg udfører et forskningseksperiment til en applikation, jeg er ved at udvikle, og jeg vil gerne høre dine tanker om nogle grundlæggende emner om sociale medier.--><!--{de}Hallo zusammen! Vielen Dank, dass Sie vorbeigeschaut und sich die Zeit genommen haben, an dieser Umfrage teilzunehmen. Ich führe ein Forschungsexperiment für eine Anwendung durch, die ich gerade entwickle, und würde gerne Ihre Meinung zu einigen grundlegenden Social-Media-Themen hören.--><!--{es}¡Hola! Gracias por tomarte el tiempo de responder a esta encuesta. Estoy realizando un experimento de investigación para una aplicación que estoy desarrollando y me gustaría conocer tu opinión sobre algunos temas básicos de redes sociales.--><!--{fr}Bonjour ! Merci d'avoir pris le temps de répondre à ce sondage. Je mène une expérience de recherche pour une application que je développe et j'aimerais connaître votre avis sur quelques sujets fondamentaux liés aux réseaux sociaux.--><!--{mi}Tena koe! Nga mihi nui ki a koe mo to taenga mai me te whai wa ki te whakautu i tenei rangahau. Kei te whakahaere au i tetahi whakamatautau rangahau mo tetahi tono kei te whanakehia e au, a ka hiahia au ki te whakarongo ki o whakaaro mo etahi kaupapa paapori paapori.--><!--{nl}Hallo! Bedankt dat je even langskomt en de tijd neemt om deze enquête in te vullen. Ik voer een onderzoeksexperiment uit voor een applicatie die ik aan het ontwikkelen ben, en ik zou graag je mening horen over een aantal basisonderwerpen op het gebied van sociale media.--><!--{nb}Hallo! Takk for at du stakk innom og tok deg tid til å svare på denne undersøkelsen. Jeg gjennomfører et forskningseksperiment for en applikasjon jeg utvikler, og jeg vil gjerne høre hva du tenker om noen grunnleggende emner innen sosiale medier.--><!--{pt}Olá! Obrigado por passar por aqui e dedicar seu tempo para responder a esta pesquisa. Estou conduzindo um experimento de pesquisa para um aplicativo que estou desenvolvendo e gostaria de saber sua opinião sobre alguns tópicos básicos de mídias sociais.--><!--{fi}Hei! Kiitos käynnistä ja kyselyyn vastaamisesta. Olen tekemässä tutkimuskoetta kehittämälleni sovellukselle ja haluaisin kuulla ajatuksiasi joistakin sosiaalisen median perusaiheista.--><!--{sv}Hej där! Tack för att du tittade in och tog dig tid att svara på den här enkäten. Jag genomför ett forskningsexperiment för en applikation jag utvecklar, och jag skulle vilja höra dina tankar om några grundläggande ämnen inom sociala medier.--><!--{el}Γεια σας! Σας ευχαριστώ που περάσατε από εδώ και αφιερώσατε χρόνο για να απαντήσετε σε αυτήν την έρευνα. Διεξάγω ένα ερευνητικό πείραμα για μια εφαρμογή που αναπτύσσω και θα ήθελα να ακούσω τις σκέψεις σας σχετικά με ορισμένα βασικά θέματα κοινωνικών μέσων.--><!--{yu}你好！多謝你嚟到同埋抽時間回答呢個問卷調查。我為我開發緊嘅應用程式進行緊一個研究實驗，我想聽下你對一啲基本嘅社交媒體主題嘅諗法。--><!--{ja}こんにちは！このアンケートにご回答いただきありがとうございます。現在開発中のアプリケーションに関する調査実験を行っているのですが、ソーシャルメディアに関する基本的なトピックについて皆様のご意見を伺いたいと思っています。--><!--{kr}안녕하세요! 설문조사에 참여해 주셔서 감사합니다. 제가 개발 중인 애플리케이션에 대한 연구 실험을 진행 중인데, 기본적인 소셜 미디어 주제에 대한 여러분의 의견을 듣고 싶습니다.-->
+                        </p>
+                        <br>
+                        <p style="color: #ABABAB; font-size: 15px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" style="fill: #ABABAB; height: 18px; position: relative; margin-right: -2px; top: 3.5px;">
+                            <path d="M320-160h320v-120q0-66-47-113t-113-47q-66 0-113 47t-47 113v120Zm160-360q66 0 113-47t47-113v-120H320v120q0 66 47 113t113 47ZM200-80q-17 0-28.5-11.5T160-120q0-17 11.5-28.5T200-160h40v-120q0-61 28.5-114.5T348-480q-51-32-79.5-85.5T240-680v-120h-40q-17 0-28.5-11.5T160-840q0-17 11.5-28.5T200-880h560q17 0 28.5 11.5T800-840q0 17-11.5 28.5T760-800h-40v120q0 61-28.5 114.5T612-480q51 32 79.5 85.5T720-280v120h40q17 0 28.5 11.5T800-120q0 17-11.5 28.5T760-80H200Zm280-80Zm0-640Z"/>
+                            </svg>
+                            5 MIN
+                        </p>
+                        <p style="color: #ABABAB; font-size: 15px; margin-top: -5px; margin-bottom: 22px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" style="fill: #ABABAB; height: 18px; position: relative; margin-right: -2px; top: 3.5px;">
+                                <path xmlns="http://www.w3.org/2000/svg" d="M478-240q21 0 35.5-14.5T528-290q0-21-14.5-35.5T478-340q-21 0-35.5 14.5T428-290q0 21 14.5 35.5T478-240Zm2 160q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Zm4-172q25 0 43.5 16t18.5 40q0 22-13.5 39T502-525q-23 20-40.5 44T444-427q0 14 10.5 23.5T479-394q15 0 25.5-10t13.5-25q4-21 18-37.5t30-31.5q23-22 39.5-48t16.5-58q0-51-41.5-83.5T484-720q-38 0-72.5 16T359-655q-7 12-4.5 25.5T368-609q14 8 29 5t25-17q11-15 27.5-23t34.5-8Z"/>
+                            </svg>
+                            20 QUESTIONS
+                            <!--{ca} 20 PREGUNTES--><!--{da} 20 SPØRGSMÅL--><!--{de} 20 FRAGEN--><!--{es} 20 PREGUNTAS--><!--{fr} 20 QUESTIONS--><!--{mi} 20 PATAI--><!--{nl}20 VRAGEN--><!--{nb} 20 SPØRSMÅL--><!--{pt} 20 PERGUNTAS--><!--{fi} 20 KYSYMYSTÄ--><!--{sv} 20 FRÅGOR--><!--{el} 20 ΕΡΩΤΗΣΕΙΣ--><!--{yu} 20個問題--><!--{ja} 20の質問--><!--{kr} 20개의 질문-->
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div style="width: calc(100% - 40px); max-width: 710px;">
+                    <h3 style="text-align: left;">
+                        Section 1 
+                        <!--{ca}Secció 1--><!--{da}Sektion 1--><!--{de}Abschnitt 1--><!--{es}Sección 1--><!--{fr}Section 1--><!--{mi}Wāhanga 1--><!--{nl}Sectie 1--><!--{nb}Seksjon 1--><!--{pt}Seção 1--><!--{fi}Osa 1--><!--{sv}Section 1--><!--{el}Τμήμα 1--><!--{yu}第 1 節--><!--{ja}セクション1--><!--{kr}섹션 1-->
+                    </h3>
+                </div>
+                <div class="container" style="width: calc(100% - 40px); max-width: 710px; border-radius: 20px; overflow: hidden; height: auto; margin-top: 20px;">
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h3>
+                            1. What do you mostly use social media for?
+                            <!--{ca}1. Per a què fas servir principalment les xarxes socials?--><!--{da}1. Hvad bruger du mest sociale medier til?--><!--{de}1. Wofür nutzen Sie soziale Medien hauptsächlich?--><!--{es}1. ¿Para qué utilizas principalmente las redes sociales?--><!--{fr}1. À quoi utilisez-vous principalement les réseaux sociaux ?--><!--{mi}1. He aha te nuinga o te whakamahi i nga paapori pāpori?--><!--{nl}1. Waarvoor gebruik je sociale media het meest?--><!--{nb}1. Hva bruker du mest sosiale medier til?--><!--{pt}1. Para que você mais usa as mídias sociais?--><!--{fi}1. Mihin käytät enimmäkseen sosiaalista mediaa?--><!--{sv}1. Vad använder du sociala medier mest till?--><!--{el}1. Για ποιο λόγο χρησιμοποιείτε κυρίως τα μέσα κοινωνικής δικτύωσης;--><!--{yu}1. 你多數用社交媒體做乜？--><!--{ja}1. ソーシャルメディアを主に何に利用していますか?--><!--{kr}1. 당신은 주로 소셜 미디어를 무엇에 사용하시나요?-->
+                        </h3>
+                        <p style="color: #ABABAB; font-style: italic;">
+                            Select only one option.
+                            <!--{ca}Selecciona només una opció--><!--{da}Vælg kun én mulighed.--><!--{de}Wählen Sie nur eine Option aus.--><!--{es}Selecciona sólo una opción.--><!--{fr}Sélectionnez une seule option.--><!--{mi}Tīpakohia kotahi anake te kōwhiringa.--><!--{nl}Selecteer slechts één optie.--><!--{nb}Velg bare ett alternativ.--><!--{pt}Selecione apenas uma opção.--><!--{fi}Valitse vain yksi vaihtoehto.--><!--{sv}Välj bara ett alternativ.--><!--{el}Επιλέξτε μόνο μία επιλογή.--><!--{yu}只揀一個選項。--><!--{ja}オプションを 1 つだけ選択してください。--><!--{kr}옵션을 하나만 선택하세요.-->
+                        </p>
+                        <input type="radio" name="1" id="q1-a1" value="Connect with friends">
+                        <label for="q1-a1">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Connect with friends
+                                <!--{ca}Per connectar amb amics--><!--{da}At komme i kontakt med venner--><!--{de}Um mit Freunden in Kontakt zu treten--><!--{es}Conectar con amigos--><!--{fr}Pour se connecter avec des amis--><!--{mi}Hei hono atu ki o hoa--><!--{nl}Om contact te maken met vrienden--><!--{nb}Å få kontakt med venner--><!--{pt}Para se conectar com amigos--><!--{fi}Yhteydenpitoon ystävien kanssa--><!--{sv}Att få kontakt med vänner--><!--{el}Για να συνδεθείτε με φίλους--><!--{yu}同朋友聯繫--><!--{ja}友達とつながる--><!--{kr}친구들과 연결하려면-->
+                            </span>
+                        </label>
+                        <input type="radio" name="1" id="q1-a2" value="Get the latest news/information">
+                        <label for="q1-a2">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Get the latest news/information
+                                <!--{ca}Per obtenir les notícies--><!--{da}For at få de seneste nyheder--><!--{de}Um die neuesten Nachrichten zu erhalten--><!--{es}Para obtener las últimas noticias--><!--{fr}Pour obtenir les dernières nouvelles--><!--{mi}Ki te tiki i nga korero hou--><!--{nl}Om het laatste nieuws te ontvangen--><!--{nb}For å få de siste nyhetene--><!--{pt}Para obter as últimas notícias--><!--{fi}Saadaksesi uusimmat uutiset--><!--{sv}För att få de senaste nyheterna--><!--{el}Για να λαμβάνετε τα τελευταία νέα--><!--{yu}要攞到最新嘅新聞/資訊--><!--{ja}最新のニュース/情報を入手するには--><!--{kr}최신 뉴스/정보를 얻으려면-->
+                            </span>
+                        </label>
+                        <input type="radio" name="1" id="q1-a3" value="Explore events near me">
+                        <label for="q1-a3">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Explore events near me
+                                <!--{ca}Per explorar esdeveniments a prop meu--><!--{da}For at udforske begivenheder i nærheden af ​​mig--><!--{de}Um Veranstaltungen in meiner Nähe zu entdecken--><!--{es}Para explorar eventos cerca de mí--><!--{fr}Pour explorer les événements près de chez moi--><!--{mi}Ki te tuhura i nga kaupapa e tata ana ki ahau--><!--{nl}Om evenementen bij mij in de buurt te verkennen--><!--{nb}For å utforske arrangementer i nærheten av meg--><!--{pt}Para explorar eventos perto de mim--><!--{fi}Tutustuaksesi lähelläni tapahtuviin tapahtumiin--><!--{sv}För att utforska evenemang nära mig--><!--{el}Για να εξερευνήσετε εκδηλώσεις κοντά μου--><!--{yu}去探索我附近嘅活動--><!--{ja}近くのイベントを探す--><!--{kr}내 주변 이벤트를 탐색하려면-->
+                            </span>
+                        </label>
+                        <input type="radio" name="1" id="q1-a4" value="Entertainment">
+                        <label for="q1-a4">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Entertainment
+                                <!--{ca}Entreteniment--><!--{da}Underholdning--><!--{de}Unterhaltung--><!--{es}Entretenimiento--><!--{fr}Divertissement--><!--{mi}Whakangahau--><!--{nl}Vermaak--><!--{nb}Underholdning--><!--{pt}Entretenimento--><!--{fi}Viihde--><!--{sv}Underhållning--><!--{el}Ψυχαγωγία--><!--{yu}娛樂--><!--{ja}エンターテインメント--><!--{kr}오락-->
+                            </span>
+                        </label>
+                        <input type="radio" name="1" id="q1-a5" value="Cure for boredom">
+                        <label for="q1-a5">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Cure for boredom
+                                <!--{ca}Cura per a l'avorriment--><!--{da}For at kurere kedsomhed--><!--{de}Gegen Langeweile--><!--{es}Curar el aburrimiento--><!--{fr}Pour guérir l'ennui--><!--{mi}Hei whakaora i te hoha--><!--{nl}--><!--{nb}Å kurere kjedsomhet--><!--{pt}Para curar o tédio--><!--{fi}Tylsyyden parantamiseksi--><!--{sv}För att bota tristess--><!--{el}Για να θεραπεύσω την πλήξη--><!--{yu}無聊--><!--{ja}退屈を癒すために--><!--{kr}지루함을 달래기 위해-->
+                            </span>
+                        </label>
+                        <input type="radio" name="1" id="q1-a6" value="Other">
+                        <label for="q1-a6">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Other
+                                <!--{ca}Altre--><!--{da}Andre--><!--{de}Andere--><!--{es}Otro--><!--{fr}Autre--><!--{mi}Ētahi atu--><!--{nl}Ander--><!--{nb}Annen--><!--{pt}Outro--><!--{fi}Muut--><!--{sv}Andra--><!--{el}Αλλος--><!--{yu}其他--><!--{ja}他の--><!--{kr}다른-->
+                            </span>
+                        </label>
+                    </div>
+                    <!--Separator-->
+                    <div style="height: 20px; clear: both;"></div>
+                    <div style="width: 100%; height: 1px; background: #ABABAB;"></div>
+                    <div style="clear: both;"></div>
+                    <!--Separator-->
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h3>
+                            2. Which of the following social platforms do you use?
+                            <!--{ca}2. Quines de les següents plataformes socials utilitzeu?--><!--{da}2. Hvilke af følgende sociale platforme bruger du?--><!--{de}2. Welche der folgenden sozialen Plattformen nutzen Sie?--><!--{es}2. ¿Cuáles de las siguientes plataformas sociales utilizas?--><!--{fr}2. Laquelle des plateformes sociales suivantes utilisez-vous ?--><!--{mi}2. Ko tehea o nga papaapori e whai ake nei ka whakamahia e koe?--><!--{nl}2. Welke van de volgende sociale platforms gebruikt u?--><!--{nb}2. Hvilke av de følgende sosiale plattformene bruker du?--><!--{pt}2. Qual das seguintes plataformas sociais você usa?--><!--{fi}2. Mitä seuraavista sosiaalisen median alustoista käytät?--><!--{sv}2. Vilka av följande sociala plattformar använder du?--><!--{el}2. Ποιες από τις ακόλουθες πλατφόρμες κοινωνικής δικτύωσης χρησιμοποιείτε;--><!--{yu}2. 你用緊以下邊個社交平台？--><!--{ja}2. 次のソーシャル プラットフォームのうちどれを使用していますか?--><!--{kr}2. 다음 중 어떤 소셜 플랫폼을 사용하시나요?-->
+                        </h3>
+                        <p style="color: #ABABAB; font-style: italic;">
+                            Select all options that apply.
+                            <!--{ca}Selecciona totes les opcions que corresponguin.--><!--{da}Vælg alle relevante muligheder.--><!--{de}Wählen Sie alle zutreffenden Optionen aus.--><!--{es}Selecciona todas las opciones que apliquen.--><!--{fr}Sélectionnez toutes les options qui s’appliquent.--><!--{mi}Tīpakohia ngā kōwhiringa katoa e hāngai ana.--><!--{nl}Selecteer alle opties die van toepassing zijn.--><!--{nb}Velg alle alternativene som gjelder.--><!--{pt}Selecione todas as opções aplicáveis.--><!--{fi}Valitse kaikki sopivat vaihtoehdot.--><!--{sv}Markera alla alternativ som gäller.--><!--{el}Επιλέξτε όλες τις επιλογές που ισχύουν.--><!--{yu}揀所有適用嘅選項。--><!--{ja}該当するオプションをすべて選択します。--><!--{kr}해당되는 모든 옵션을 선택하세요.-->
+                        </p>
+                        <input type="checkbox" name="2" id="q2-a1" value="Instagram">
+                        <label for="q2-a1">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Instagram
+                            </span>
+                        </label>
+                        <input type="checkbox" name="2" id="q2-a2" value="Snapchat">
+                        <label for="q2-a2">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Snapchat
+                            </span>
+                        </label>
+                        <input type="checkbox" name="2" id="q2-a3" value="TikTok">
+                        <label for="q2-a3">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                TikTok
+                            </span>
+                        </label>
+                        <input type="checkbox" name="2" id="q2-a4" value="WhatsApp">
+                        <label for="q2-a4">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                WhatsApp
+                            </span>
+                        </label>
+                        <input type="checkbox" name="2" id="q2-a5" value="X (fka Twitter)">
+                        <label for="q2-a5">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                X (fka Twitter)
+                            </span>
+                        </label>
+                        <input type="checkbox" name="2" id="q2-a6" value="Bluesky">
+                        <label for="q2-a6">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Bluesky
+                            </span>
+                        </label>
+                        <input type="checkbox" name="2" id="q2-a7" value="Other">
+                        <label for="q2-a7">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Other
+                                <!--{ca}Altre--><!--{da}Andre--><!--{de}Andere--><!--{es}Otro--><!--{fr}Autre--><!--{mi}Ētahi atu--><!--{nl}Ander--><!--{nb}Annen--><!--{pt}Outro--><!--{fi}Muut--><!--{sv}Andra--><!--{el}Αλλος--><!--{yu}其他--><!--{ja}他の--><!--{kr}다른-->
+                            </span>
+                        </label>
+                    </div>
+                    <!--Separator-->
+                    <div style="height: 20px; clear: both;"></div>
+                    <div style="width: 100%; height: 1px; background: #ABABAB;"></div>
+                    <div style="clear: both;"></div>
+                    <!--Separator-->
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h3>
+                            3. Which of the following elements are those you WOULDN’T CHANGE from such selected apps?
+                            <!--{ca}3. Quins dels següents elements NO CANVIARIES d'aquestes aplicacions seleccionades?--><!--{da}3. Hvilke af følgende elementer ville du IKKE ÆNDRE i sådanne udvalgte apps?--><!--{de}3. Welche der folgenden Elemente würden Sie an solchen ausgewählten Apps NICHT ÄNDERN?--><!--{es}3. ¿Cuáles de los siguientes elementos son aquellos que NO CAMBIARÍAS de dichas aplicaciones seleccionadas?--><!--{fr}3. Parmi les éléments suivants, lesquels NE CHANGERIEZ PAS dans les applications sélectionnées ?--><!--{mi}3. Ko tehea o nga huānga e whai ake nei KAORE koe e Hurihia mai i enei taupānga kua tohua?--><!--{nl}3. Welke van de volgende elementen zou u NIET VERANDEREN in de geselecteerde apps?--><!--{nb}3. Hvilke av de følgende elementene ville du IKKE ENDRE fra slike utvalgte apper?--><!--{pt}3. Quais dos seguintes elementos você NÃO MUDARIA nesses aplicativos selecionados?--><!--{fi3. Mitä seuraavista elementeistä ET MUUTTAISI valituissa sovelluksissa?--><!--{sv}3. Vilka av följande element SKULLE du INTE ÄNDRA från sådana utvalda appar?--><!--{el}3. Ποια από τα παρακάτω στοιχεία ΔΕΝ θα ΑΛΛΑΖΑΤΕ από τέτοιες επιλεγμένες εφαρμογές;--><!--{yu}3. 以下邊啲元素係你喺呢啲所選應用程式入面唔會改嘅？--><!--{ja}3. 選択したアプリから変更したくない要素は次のどれですか?--><!--{kr}3. 다음 중 선택한 앱에서 변경하고 싶지 않은 요소는 무엇입니까?-->
+
+                        </h3>
+                        <p style="color: #ABABAB; font-style: italic;">
+                            Select all options that apply.
+                            <!--{ca}Selecciona totes les opcions que corresponguin.--><!--{da}Vælg alle relevante muligheder.--><!--{de}Wählen Sie alle zutreffenden Optionen aus.--><!--{es}Selecciona todas las opciones que apliquen.--><!--{fr}Sélectionnez toutes les options qui s’appliquent.--><!--{mi}Tīpakohia ngā kōwhiringa katoa e hāngai ana.--><!--{nl}Selecteer alle opties die van toepassing zijn.--><!--{nb}Velg alle alternativene som gjelder.--><!--{pt}Selecione todas as opções aplicáveis.--><!--{fi}Valitse kaikki sopivat vaihtoehdot.--><!--{sv}Markera alla alternativ som gäller.--><!--{el}Επιλέξτε όλες τις επιλογές που ισχύουν.--><!--{yu}揀所有適用嘅選項。--><!--{ja}該当するオプションをすべて選択します。--><!--{kr}해당되는 모든 옵션을 선택하세요.-->
+                        </p>
+                        <input type="checkbox" name="3" id="q3-a1" value="Design">
+                        <label for="q3-a1">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Design
+                                <!--{ca}Disseny--><!--{da}Design--><!--{de}Design--><!--{es}Diseño--><!--{fr}Désign--><!--{mi}Hoahoa--><!--{nl}Ontwerp--><!--{nb}Design--><!--{pt}Desenho--><!--{fi}Design--><!--{sv}Design--><!--{el}Σχεδιάζω--><!--{yu}設計--><!--{ja}デザイン--><!--{kr}설계-->
+                            </span>
+                        </label>
+                        <input type="checkbox" name="3" id="q3-a2" value="Basic features">
+                        <label for="q3-a2">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Basic features
+                                <!--{ca}Característiques bàsiques--><!--{da}Grundlæggende funktioner--><!--{de}Grundfunktionen--><!--{es}Funciones básicas--><!--{fr}Caractéristiques de base--><!--{mi}Nga ahuatanga taketake--><!--{nl}Basisfuncties--><!--{nb}Grunnleggende funksjoner--><!--{pt}Características básicas--><!--{fi}Perustoiminnot--><!--{sv}Grundläggande funktioner--><!--{el}Βασικά χαρακτηριστικά--><!--{yu}基本功能--><!--{ja}基本機能--><!--{kr}기본 기능-->
+                            </span>
+                        </label>
+                        <input type="checkbox" name="3" id="q3-a3" value="Concept of the app">
+                        <label for="q3-a3">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Concept of the app
+                                <!--{ca}Concepte de l'aplicació--><!--{da}Appens koncept--><!--{de}Konzept der App--><!--{es}Concepto de la app--><!--{fr}Concept de l'application--><!--{mi}Te ariā o te taupānga--><!--{nl}Concept van de app--><!--{nb}Appens konsept--><!--{pt}Conceito do aplicativo--><!--{fi}Sovelluksen konsepti--><!--{sv}Appens koncept--><!--{el}Έννοια του app--><!--{yu}應用程式嘅概念--><!--{ja}アプリのコンセプト--><!--{kr}앱의 개념-->
+                            </span>
+                        </label>
+                        <input type="checkbox" name="3" id="q3-a4" value="Sections">
+                        <label for="q3-a4">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Sections (how screens are divided)
+                                <!--{ca}Seccions (com es divideixen les pantalles)--><!--{da}Sektioner (hvordan skærme er opdelt)--><!--{de}Abschnitte (wie Bildschirme aufgeteilt sind)--><!--{es}Secciones (cómo se dividen las pantallas)--><!--{fr}Sections (comment les écrans sont divisés)--><!--{mi}Nga waahanga (me pehea te wehewehenga o nga mata)--><!--{nl}Secties (hoe schermen zijn verdeeld)--><!--{nb}Seksjoner (hvordan skjermer er delt inn)--><!--{pt}Seções (como as telas são divididas)--><!--{fi}Osiot (miten näytöt jaetaan)--><!--{sv}Sektioner (hur skärmar är indelade)--><!--{el}Ενότητες (πώς χωρίζονται οι οθόνες)--><!--{yu}部分（畫面係點分）--><!--{ja}セクション（画面の分割方法）--><!--{kr}섹션(화면이 어떻게 나뉘는지)-->
+                            </span>
+                        </label>
+                    </div>
+                    <!--Separator-->
+                    <div style="height: 20px; clear: both;"></div>
+                    <div style="width: 100%; height: 1px; background: #ABABAB;"></div>
+                    <div style="clear: both;"></div>
+                    <!--Separator-->
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h3>
+                            4. Which of the following elements are those you WOULD CHANGE from such selected apps?
+                            <!--{ca}4. Quins dels següents elements CANVIARIA d'aquestes aplicacions seleccionades?--><!--{da}4. Hvilke af følgende elementer VILLE du ÆNDRE fra sådanne udvalgte apps?--><!--{de}4. Welche der folgenden Elemente würden Sie an solchen ausgewählten Apps ÄNDERN?--><!--{es}4. ¿Cuáles de los siguientes elementos son los que CAMBIARÍAS de dichas aplicaciones seleccionadas?--><!--{fr}4. Parmi les éléments suivants, lesquels CHANGERIEZ-VOUS dans les applications sélectionnées ?--><!--{mi}4. Ko tehea o nga huānga e whai ake nei ka Huria e koe mai i aua taupānga kua tohua?--><!--{nl}4. Welke van de volgende elementen ZOU U VERANDEREN in de geselecteerde apps?--><!--{nb}4. Hvilke av de følgende elementene VILLE du ENDRE fra slike utvalgte apper?--><!--{pt}4. Quais dos seguintes elementos você MUDARIA nesses aplicativos selecionados?--><!--{fi}4. Mitkä seuraavista elementeistä MUUTTAISIT valituissa sovelluksissa?--><!--{sv}4. Vilka av följande element SKULLE du ÄNDRA från sådana utvalda appar?--><!--{el}4. Ποια από τα παρακάτω στοιχεία θα ΑΛΛΑΖΑΤΕ από τέτοιες επιλεγμένες εφαρμογές;--><!--{yu}4. 以下邊啲元素係你會喺呢啲所選應用程式入面改嘅？--><!--{ja}4. 選択したアプリから変更したい要素は次のどれですか?--><!--{kr}4. 다음 중 선택한 앱에서 바꾸고 싶은 요소는 무엇입니까?-->
+
+                        </h3>
+                        <p style="color: #ABABAB; font-style: italic;">
+                            Select all options that apply.
+                            <!--{ca}Selecciona totes les opcions que corresponguin.--><!--{da}Vælg alle relevante muligheder.--><!--{de}Wählen Sie alle zutreffenden Optionen aus.--><!--{es}Selecciona todas las opciones que apliquen.--><!--{fr}Sélectionnez toutes les options qui s’appliquent.--><!--{mi}Tīpakohia ngā kōwhiringa katoa e hāngai ana.--><!--{nl}Selecteer alle opties die van toepassing zijn.--><!--{nb}Velg alle alternativene som gjelder.--><!--{pt}Selecione todas as opções aplicáveis.--><!--{fi}Valitse kaikki sopivat vaihtoehdot.--><!--{sv}Markera alla alternativ som gäller.--><!--{el}Επιλέξτε όλες τις επιλογές που ισχύουν.--><!--{yu}揀所有適用嘅選項。--><!--{ja}該当するオプションをすべて選択します。--><!--{kr}해당되는 모든 옵션을 선택하세요.-->
+                        </p>
+                        <input type="checkbox" name="4" id="q4-a1" value="Design">
+                        <label for="q4-a1">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Design
+                                <!--{ca}Disseny--><!--{da}Design--><!--{de}Design--><!--{es}Diseño--><!--{fr}Désign--><!--{mi}Hoahoa--><!--{nl}Ontwerp--><!--{nb}Design--><!--{pt}Desenho--><!--{fi}Design--><!--{sv}Design--><!--{el}Σχεδιάζω--><!--{yu}設計--><!--{ja}デザイン--><!--{kr}설계-->
+                            </span>
+                        </label>
+                        <input type="checkbox" name="4" id="q4-a2" value="Basic features">
+                        <label for="q4-a2">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Basic features
+                                <!--{ca}Característiques bàsiques--><!--{da}Grundlæggende funktioner--><!--{de}Grundfunktionen--><!--{es}Funciones básicas--><!--{fr}Caractéristiques de base--><!--{mi}Nga ahuatanga taketake--><!--{nl}Basisfuncties--><!--{nb}Grunnleggende funksjoner--><!--{pt}Características básicas--><!--{fi}Perustoiminnot--><!--{sv}Grundläggande funktioner--><!--{el}Βασικά χαρακτηριστικά--><!--{yu}基本功能--><!--{ja}基本機能--><!--{kr}기본 기능-->
+                            </span>
+                        </label>
+                        <input type="checkbox" name="4" id="q4-a3" value="Concept of the app">
+                        <label for="q4-a3">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Concept of the app
+                                <!--{ca}Concepte de l'aplicació--><!--{da}Appens koncept--><!--{de}Konzept der App--><!--{es}Concepto de la app--><!--{fr}Concept de l'application--><!--{mi}Te ariā o te taupānga--><!--{nl}Concept van de app--><!--{nb}Appens konsept--><!--{pt}Conceito do aplicativo--><!--{fi}Sovelluksen konsepti--><!--{sv}Appens koncept--><!--{el}Έννοια του app--><!--{yu}應用程式嘅概念--><!--{ja}アプリのコンセプト--><!--{kr}앱의 개념-->
+                            </span>
+                        </label>
+                        <input type="checkbox" name="4" id="q4-a4" value="Sections">
+                        <label for="q4-a4">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Sections (how screens are divided)
+                                <!--{ca}Seccions (com es divideixen les pantalles)--><!--{da}Sektioner (hvordan skærme er opdelt)--><!--{de}Abschnitte (wie Bildschirme aufgeteilt sind)--><!--{es}Secciones (cómo se dividen las pantallas)--><!--{fr}Sections (comment les écrans sont divisés)--><!--{mi}Nga waahanga (me pehea te wehewehenga o nga mata)--><!--{nl}Secties (hoe schermen zijn verdeeld)--><!--{nb}Seksjoner (hvordan skjermer er delt inn)--><!--{pt}Seções (como as telas são divididas)--><!--{fi}Osiot (miten näytöt jaetaan)--><!--{sv}Sektioner (hur skärmar är indelade)--><!--{el}Ενότητες (πώς χωρίζονται οι οθόνες)--><!--{yu}部分（畫面係點分）--><!--{ja}セクション（画面の分割方法）--><!--{kr}섹션(화면이 어떻게 나뉘는지)-->
+                            </span>
+                        </label>
+                    </div>
+                    <div style="height: 20px; clear: both;"></div>
+                </div>
+                <br>
+                <br>
+                <div style="width: calc(100% - 40px); max-width: 710px;">
+                    <h3 style="text-align: left;">
+                        Section 2
+                        <!--{ca}Secció 2--><!--{da}Sektion 2--><!--{de}Abschnitt 2--><!--{es}Sección 2--><!--{fr}Section 2--><!--{mi}Wāhanga 2--><!--{nl}Sectie 2--><!--{nb}Seksjon 2--><!--{pt}Seção 2--><!--{fi}Osa 2--><!--{sv}Section 2--><!--{el}Τμήμα 2--><!--{yu}第 2 節--><!--{ja}セクション2--><!--{kr}섹션 2-->
+                    </h3>
+                </div>
+                <div class="container" style="width: calc(100% - 40px); max-width: 710px; border-radius: 20px; overflow: hidden; height: auto; margin-top: 20px;">
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h3>
+                            5. Select the option that best describes how you feel about the figures who control/own/direct the companies behind popular social media channels
+                            <!--{ca}5. Selecciona l'opció que millor descrigui com et sents sobre les figures que controlen/posseeixen/dirigeixen les empreses darrere dels canals populars de xarxes socials.--><!--{da}5. Vælg den mulighed, der bedst beskriver din opfattelse af de personer, der kontrollerer/ejer/leder virksomhederne bag populære sociale mediekanaler.--><!--{de}5. Wählen Sie die Option, die Ihre Meinung zu den Personen, die die Unternehmen hinter beliebten Social-Media-Kanälen kontrollieren/besitzen/leiten, am besten beschreibt.--><!--{es}5. Selecciona la opción que mejor describa cómo te sientes acerca de las figuras que controlan/poseen/dirigen las empresas detrás de los canales populares de redes sociales.--><!--{fr}5. Sélectionnez l'option qui décrit le mieux ce que vous pensez des personnalités qui contrôlent/possèdent/dirigent les entreprises derrière les réseaux sociaux populaires.--><!--{mi}5. Tīpakohia te kōwhiringa e tino whakamārama ana i ō whakaaro mō ngā whika e whakahaere/mau/whakahaere ai ngā kamupene kei muri i ngā hongere pāpāho pāpori rongonui--><!--{nl}5. Selecteer de optie die het beste beschrijft hoe u denkt over de figuren die de bedrijven achter populaire socialemediakanalen controleren/bezitten/aansturen--><!--{nb}5. Velg alternativet som best beskriver hva du synes om personene som kontrollerer/eier/leder selskapene bak populære sosiale mediekanaler.--><!--{pt}5. Selecione a opção que melhor descreve como você se sente em relação às figuras que controlam/possuem/dirigem as empresas por trás dos canais populares de mídia social.--><!--{fi}5. Valitse vaihtoehto, joka parhaiten kuvaa, mitä mieltä olet henkilöistä, jotka hallitsevat/omistavat/johtavat suosittujen sosiaalisen median kanavien taustalla olevia yrityksiä.--><!--{sv}5. Välj det alternativ som bäst beskriver hur du känner inför personerna som kontrollerar/äger/leder företagen bakom populära sociala mediekanaler--><!--{el}5. Επιλέξτε την επιλογή που περιγράφει καλύτερα πώς νιώθετε για τα πρόσωπα που ελέγχουν/κατέχουν/διευθύνουν τις εταιρείες πίσω από δημοφιλή κανάλια κοινωνικής δικτύωσης.--><!--{yu}5. 揀一個最能夠形容你對控制/擁有/指導熱門社交媒體渠道背後公司嘅人物嘅感受嘅選項--><!--{ja}5. 人気のソーシャルメディアチャンネルの背後にある企業を管理、所有、指揮する人物について、あなたの気持ちを最もよく表す選択肢を選択してください。--><!--{kr}5. 인기 있는 소셜 미디어 채널 뒤에 있는 회사를 통제/소유/지휘하는 인물에 대해 어떻게 생각하는지 가장 잘 설명하는 옵션을 선택하십시오.-->
+                            <i style="font-weight: 400;">(e.g. Mark Zuckerberg)</i>
+                        </h3>
+                        <p style="color: #ABABAB; font-style: italic;">
+                            Select only one option.
+                            <!--{ca}Selecciona només una opció--><!--{da}Vælg kun én mulighed.--><!--{de}Wählen Sie nur eine Option aus.--><!--{es}Selecciona sólo una opción.--><!--{fr}Sélectionnez une seule option.--><!--{mi}Tīpakohia kotahi anake te kōwhiringa.--><!--{nl}Selecteer slechts één optie.--><!--{nb}Velg bare ett alternativ.--><!--{pt}Selecione apenas uma opção.--><!--{fi}Valitse vain yksi vaihtoehto.--><!--{sv}Välj bara ett alternativ.--><!--{el}Επιλέξτε μόνο μία επιλογή.--><!--{yu}只揀一個選項。--><!--{ja}オプションを 1 つだけ選択してください。--><!--{kr}옵션을 하나만 선택하세요.-->
+                        </p>
+                        <input type="radio" name="5" id="q5-a1" value="I agree">
+                        <label for="q5-a1">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                I agree
+                                <!--{ca}Estic d'acord--><!--{da}Jeg er enig--><!--{de}Ich stimme zu--><!--{es}Estoy de acuerdo--><!--{fr}Je suis d'accord--><!--{mi}Whakaae ahau--><!--{nl}Ik ben het ermee eens--><!--{nb}Jeg er enig--><!--{pt}Concordo--><!--{fi}Olen samaa mieltä--><!--{sv}Jag håller med--><!--{el}Συμφωνώ--><!--{yu}我同意--><!--{ja}同意します--><!--{kr}나는 동의한다-->
+                            </span>
+                        </label>
+                        <input type="radio" name="5" id="q5-a2" value="I disagree">
+                        <label for="q5-a2">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                I disagree
+                                <!--{ca}No estic d'acord--><!--{da}Jeg er uenig--><!--{de}Ich bin nicht einverstanden--><!--{es}No estoy de acuerdo--><!--{fr}Je ne suis pas d'accord--><!--{mi}Kare au e whakaae--><!--{nl}Ik ben het er niet mee eens--><!--{nb}Jeg er uenig--><!--{pt}Discordo--><!--{fi}Olen eri mieltä--><!--{sv}Jag håller inte med--><!--{el}Διαφωνώ--><!--{yu}我唔同意--><!--{ja}私は同意しません--><!--{kr}나는 동의하지 않는다-->
+                            </span>
+                        </label>
+                        <input type="radio" name="5" id="q5-a3" value="Not sure">
+                        <label for="q5-a3">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Not sure
+                                <!--{ca}No n'estic segur--><!--{da}Ikke sikker--><!--{de}Nicht sicher--><!--{es}No estoy seguro--><!--{fr}Pas sûr--><!--{mi}Kaore i tino mohio--><!--{nl}Ik weet het niet zeker--><!--{nb}Ikke sikker--><!--{pt}Não tenho certeza--><!--{fi}En ole varma--><!--{sv}Inte säker--><!--{el}Δεν είμαι σίγουρος/η--><!--{yu}唔肯定--><!--{ja}わからない--><!--{kr}확실하지 않음-->
+                            </span>
+                        </label>
+                    </div>
+                    <!--Separator-->
+                    <div style="height: 20px; clear: both;"></div>
+                    <div style="width: 100%; height: 1px; background: #ABABAB;"></div>
+                    <div style="clear: both;"></div>
+                    <!--Separator-->
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h3>
+                            6. Do you think social media app users should have more control over what happens on platforms?
+                            <!--{ca}6. Creus que els usuaris d'aplicacions de xarxes socials haurien de tenir més control sobre el que passa a les plataformes?--><!--{da}6. Synes du, at brugere af sociale medieapps burde have mere kontrol over, hvad der sker på platformene?--><!--{de}6. Sind Sie der Meinung, dass Benutzer von Social-Media-Apps mehr Kontrolle darüber haben sollten, was auf den Plattformen passiert?--><!--{es}6. ¿Crees que los usuarios de aplicaciones de redes sociales deberían tener más control sobre lo que sucede en las plataformas?--><!--{fr}6. Pensez-vous que les utilisateurs d’applications de médias sociaux devraient avoir plus de contrôle sur ce qui se passe sur les plateformes ?--><!--{mi}6. Ki to whakaaro me kaha ake te mana o nga kaiwhakamahi taupānga paapori ki runga i nga mea ka tupu i runga i nga papaaho?--><!--{nl}6. Vindt u dat gebruikers van socialemedia-apps meer controle moeten hebben over wat er op hun platforms gebeurt?--><!--{nb}6. Synes du brukere av sosiale medier-apper burde ha mer kontroll over hva som skjer på plattformene?--><!--{pt}6. Você acha que os usuários de aplicativos de mídia social deveriam ter mais controle sobre o que acontece nas plataformas?--><!--{fi}6. Pitäisikö mielestäsi sosiaalisen median sovellusten käyttäjillä olla enemmän määräysvaltaa alustojen tapahtumiin?--><!--{sv}6. Tycker du att användare av sociala medieappar borde ha mer kontroll över vad som händer på plattformarna?--><!--{el}6. Πιστεύετε ότι οι χρήστες των εφαρμογών κοινωνικής δικτύωσης θα πρέπει να έχουν μεγαλύτερο έλεγχο σε ό,τι συμβαίνει στις πλατφόρμες;--><!--{yu}6. 你覺得社交媒體應用程式用戶係咪應該對平台上發生嘅事有更多控制權？--><!--{ja}6. ソーシャル メディア アプリのユーザーは、プラットフォーム上で起きる出来事をより細かく制御できるべきだと思いますか?--><!--{kr}6. 소셜 미디어 앱 사용자가 플랫폼에서 일어나는 일에 대해 더 많은 통제권을 가져야 한다고 생각하시나요?-->
+                            <i style="font-weight: 400;">
+                                (e.g. voting for features and changes, demanding privacy rights)
+                                <!--{ca}(per exemple, votar per funcions i canvis, exigir drets de privadesa)--><!--{da}(f.eks. stemme for funktioner og ændringer, kræve privatlivsrettigheder)--><!--{de}(z. B. Abstimmung über Funktionen und Änderungen, Einfordern von Datenschutzrechten)--><!--{es}(por ejemplo, votar por características y cambios, exigir derechos de privacidad)--><!--{fr}(par exemple, voter pour des fonctionnalités et des modifications, exiger des droits à la confidentialité)--><!--{mi}(hei tauira, te pooti mo nga ahuatanga me nga huringa, tono motika motika)--><!--{nl}(bijvoorbeeld stemmen voor functies en wijzigingen, het eisen van privacyrechten)--><!--{nb}(f.eks. stemme over funksjoner og endringer, kreve personvernrettigheter)--><!--{pt}(por exemplo, votar em recursos e mudanças, exigir direitos de privacidade)--><!--{fi}(esim. äänestäminen ominaisuuksista ja muutoksista, yksityisyyden suojaa koskevien oikeuksien vaatiminen)--><!--{sv}(t.ex. rösta för funktioner och ändringar, kräva integritetsrättigheter)--><!--{el}(π.χ. ψηφοφορία για χαρακτηριστικά και αλλαγές, διεκδίκηση δικαιωμάτων απορρήτου)--><!--{yu}（例如投票支持功能同變更，要求私隱權）--><!--{ja}（例：機能や変更への投票、プライバシー権の要求）--><!--{kr}(예: 기능 및 변경 사항에 대한 투표, 개인정보 보호 권리 요구)--> 
+                            </i>
+                        </h3>
+                        <p style="color: #ABABAB; font-style: italic;">
+                            Select only one option.
+                            <!--{ca}Selecciona només una opció--><!--{da}Vælg kun én mulighed.--><!--{de}Wählen Sie nur eine Option aus.--><!--{es}Selecciona sólo una opción.--><!--{fr}Sélectionnez une seule option.--><!--{mi}Tīpakohia kotahi anake te kōwhiringa.--><!--{nl}Selecteer slechts één optie.--><!--{nb}Velg bare ett alternativ.--><!--{pt}Selecione apenas uma opção.--><!--{fi}Valitse vain yksi vaihtoehto.--><!--{sv}Välj bara ett alternativ.--><!--{el}Επιλέξτε μόνο μία επιλογή.--><!--{yu}只揀一個選項。--><!--{ja}オプションを 1 つだけ選択してください。--><!--{kr}옵션을 하나만 선택하세요.-->
+                        </p>
+                        <input type="radio" name="6" id="q6-a1" value="Yes">
+                        <label for="q6-a1">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Yes
+                                <!--{ca}Sí--><!--{da}Ja--><!--{de}Ja--><!--{es}Sí--><!--{fr}Oui--><!--{mi}Ae--><!--{nl}Ja--><!--{nb}Ja--><!--{pt}--><!--{fi}Kyllä--><!--{sv}Ja--><!--{el}Ναί--><!--{yu}係--><!--{ja}はい--><!--{kr}예-->
+                            </span>
+                        </label>
+                        <input type="radio" name="6" id="q6-a2" value="No">
+                        <label for="q6-a2">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                No
+                                <!--{ca}No--><!--{da}Nej--><!--{de}Nein--><!--{es}No--><!--{fr}Non--><!--{mi}Kao--><!--{nl}Nee--><!--{nb}Nei--><!--{pt}Não--><!--{fi}Ei--><!--{sv}Nej--><!--{el}Οχι--><!--{yu}唔得--><!--{ja}いいえ--><!--{kr}아니요-->
+                            </span>
+                        </label>
+                        <input type="radio" name="6" id="q6-a3" value="Not sure">
+                        <label for="q6-a3">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Not sure
+                                <!--{ca}No n'estic segur--><!--{da}Ikke sikker--><!--{de}Nicht sicher--><!--{es}No estoy seguro--><!--{fr}Pas sûr--><!--{mi}Kaore i tino mohio--><!--{nl}Ik weet het niet zeker--><!--{nb}Ikke sikker--><!--{pt}Não tenho certeza--><!--{fi}En ole varma--><!--{sv}Inte säker--><!--{el}Δεν είμαι σίγουρος/η--><!--{yu}唔肯定--><!--{ja}わからない--><!--{kr}확실하지 않음-->
+                            </span>
+                        </label>
+                    </div>
+                    <!--Separator-->
+                    <div style="height: 20px; clear: both;"></div>
+                    <div style="width: 100%; height: 1px; background: #ABABAB;"></div>
+                    <div style="clear: both;"></div>
+                    <!--Separator-->
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h3>
+                            7. Do you think social media apps should integrate mental health features into their design? 
+                            <!--{ca}7. Creus que les aplicacions de xarxes socials haurien d'integrar funcions de salut mental en el seu disseny?--><!--{da}7. Synes du, at sociale medieapps bør integrere mental sundhedsfunktioner i deres design?--><!--{de}7. Sind Sie der Meinung, dass Social-Media-Apps Funktionen zur psychischen Gesundheit in ihr Design integrieren sollten?--><!--{es}7. ¿Crees que las aplicaciones de redes sociales deberían integrar funciones de salud mental en su diseño?--><!--{fr}7. Pensez-vous que les applications de médias sociaux devraient intégrer des fonctionnalités de santé mentale dans leur conception ?--><!--{mi}7. Ki to whakaaro me whakauru nga kaupapa paapori pāpori i nga ahuatanga hauora hinengaro ki roto i to raatau hoahoa?--><!--{nl}7. Vindt u dat sociale media-apps functies voor mentale gezondheid in hun ontwerp moeten integreren?--><!--{nb}7. Synes du apper for sosiale medier bør integrere funksjoner for mental helse i designet sitt?--><!--{pt}7. Você acha que os aplicativos de mídia social devem integrar recursos de saúde mental em seu design?--><!--{fi}7. Pitäisikö sosiaalisen median sovellusten mielestäsi integroida mielenterveysominaisuuksia suunnitteluunsa?--><!--{sv}7. Tycker du att appar för sociala medier borde integrera funktioner för mental hälsa i sin design?--><!--{el}7. Πιστεύετε ότι οι εφαρμογές κοινωνικής δικτύωσης θα πρέπει να ενσωματώνουν χαρακτηριστικά ψυχικής υγείας στον σχεδιασμό τους;--><!--{yu}7. 你覺得社交媒體應用程式係咪應該將心理健康功能整合到佢哋嘅設計入面？--><!--{ja}7. ソーシャル メディア アプリのデザインにメンタル ヘルス機能を組み込むべきだと思いますか?--><!--{kr}7. 소셜 미디어 앱이 정신 건강 기능을 디자인에 통합해야 한다고 생각하시나요?-->
+                            <i style="font-weight: 400;">
+                                (e.g. access to lifelines, guided breathing)
+                                <!--{ca}(per exemple, accés a línies de vida, respiració guiada)--><!--{da}(f.eks. adgang til livliner, guidet vejrtrækning)--><!--{de}(z. B. Zugang zu Rettungsleinen, geführte Atmung)--><!--{es}(por ejemplo, acceso a líneas de vida, respiración guiada)--><!--{fr}(par exemple, accès aux lignes de vie, respiration guidée)--><!--{mi}(hei tauira, te uru ki nga raina ora, te manawa arahi)--><!--{nl}(bijv. toegang tot levenslijnen, begeleide ademhaling)--><!--{nb}(f.eks. tilgang til livliner, veiledet pusting)--><!--{pt}(por exemplo, acesso a linhas de vida, respiração guiada)--><!--{fi}(esim. pääsy pelastusköysiin, ohjattu hengitys)--><!--{sv}(t.ex. tillgång till livlinor, guidad andning)--><!--{el}(π.χ. πρόσβαση σε σανίδες σωτηρίας, καθοδηγούμενη αναπνοή)--><!--{yu}（例如可以使用救生索、引導式呼吸）--><!--{ja}（例：ライフラインへのアクセス、ガイド付き呼吸）--><!--{kr}(예: 생명선 접근, 유도 호흡)-->
+                            </i>
+                        </h3>
+                        <p style="color: #ABABAB; font-style: italic;">
+                            Select only one option.
+                            <!--{ca}Selecciona només una opció--><!--{da}Vælg kun én mulighed.--><!--{de}Wählen Sie nur eine Option aus.--><!--{es}Selecciona sólo una opción.--><!--{fr}Sélectionnez une seule option.--><!--{mi}Tīpakohia kotahi anake te kōwhiringa.--><!--{nl}Selecteer slechts één optie.--><!--{nb}Velg bare ett alternativ.--><!--{pt}Selecione apenas uma opção.--><!--{fi}Valitse vain yksi vaihtoehto.--><!--{sv}Välj bara ett alternativ.--><!--{el}Επιλέξτε μόνο μία επιλογή.--><!--{yu}只揀一個選項。--><!--{ja}オプションを 1 つだけ選択してください。--><!--{kr}옵션을 하나만 선택하세요.-->
+                        </p>
+                        <input type="radio" name="7" id="q7-a1" value="Yes">
+                        <label for="q7-a1">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Yes
+                                <!--{ca}Sí--><!--{da}Ja--><!--{de}Ja--><!--{es}Sí--><!--{fr}Oui--><!--{mi}Ae--><!--{nl}Ja--><!--{nb}Ja--><!--{pt}--><!--{fi}Kyllä--><!--{sv}Ja--><!--{el}Ναί--><!--{yu}係--><!--{ja}はい--><!--{kr}예-->
+                            </span>
+                        </label>
+                        <input type="radio" name="7" id="q7-a2" value="No">
+                        <label for="q7-a2">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                No
+                                <!--{ca}No--><!--{da}Nej--><!--{de}Nein--><!--{es}No--><!--{fr}Non--><!--{mi}Kao--><!--{nl}Nee--><!--{nb}Nei--><!--{pt}Não--><!--{fi}Ei--><!--{sv}Nej--><!--{el}Οχι--><!--{yu}唔得--><!--{ja}いいえ--><!--{kr}아니요-->
+                            </span>
+                        </label>
+                        <input type="radio" name="7" id="q7-a3" value="Not sure">
+                        <label for="q7-a3">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Not sure
+                                <!--{ca}No n'estic segur--><!--{da}Ikke sikker--><!--{de}Nicht sicher--><!--{es}No estoy seguro--><!--{fr}Pas sûr--><!--{mi}Kaore i tino mohio--><!--{nl}Ik weet het niet zeker--><!--{nb}Ikke sikker--><!--{pt}Não tenho certeza--><!--{fi}En ole varma--><!--{sv}Inte säker--><!--{el}Δεν είμαι σίγουρος/η--><!--{yu}唔肯定--><!--{ja}わからない--><!--{kr}확실하지 않음-->
+                            </span>
+                        </label>
+                    </div>
+                    <!--Separator-->
+                    <div style="height: 20px; clear: both;"></div>
+                    <div style="width: 100%; height: 1px; background: #ABABAB;"></div>
+                    <div style="clear: both;"></div>
+                    <!--Separator-->
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h3>
+                            8. What do you think about media companies integrating artificial intelligence features into their apps?
+                            <!--{ca}8. Què en penseu de les empreses de mitjans de comunicació que integren funcions d'intel·ligència artificial a les seves aplicacions?--><!--{da}8. Hvad synes du om, at medievirksomheder integrerer kunstig intelligens i deres apps?--><!--{de}8. Was halten Sie davon, dass Medienunternehmen Funktionen der künstlichen Intelligenz in ihre Apps integrieren?--><!--{es}8. ¿Qué opinas sobre las empresas de medios que integran funciones de inteligencia artificial en sus aplicaciones?--><!--{fr}8. Que pensez-vous des entreprises de médias qui intègrent des fonctionnalités d’intelligence artificielle dans leurs applications ?--><!--{mi}8. He aha to whakaaro mo nga kamupene pāpāho e whakauru ana i nga ahuatanga mohio ki roto i a raatau taupānga?--><!--{nl}8. Wat vindt u ervan dat mediabedrijven kunstmatige intelligentie in hun apps integreren?--><!--{nb}8. Hva synes du om at medieselskaper integrerer kunstig intelligens i appene sine?--><!--{pt}8. O que você acha das empresas de mídia integrarem recursos de inteligência artificial em seus aplicativos?--><!--{fi}8. Mitä mieltä olet mediayhtiöiden tekoälyominaisuuksien integroinnista sovelluksiinsa?--><!--{sv}8. Vad tycker du om att medieföretag integrerar funktioner för artificiell intelligens i sina appar?--><!--{el}8. Τι πιστεύετε για την ενσωμάτωση λειτουργιών τεχνητής νοημοσύνης στις εφαρμογές των εταιρειών μέσων ενημέρωσης;--><!--{yu}8. 你點睇傳媒公司將人工智能功能整合到佢哋嘅應用程式入面？--><!--{ja}8. メディア企業が自社のアプリに人工知能機能を統合することについてどう思いますか?--><!--{kr}8. 미디어 회사가 자사 앱에 인공지능 기능을 통합하는 것에 대해 어떻게 생각하시나요?-->
+                        </h3>
+                        <p style="color: #ABABAB; font-style: italic;">
+                            Select only one option.
+                            <!--{ca}Selecciona només una opció--><!--{da}Vælg kun én mulighed.--><!--{de}Wählen Sie nur eine Option aus.--><!--{es}Selecciona sólo una opción.--><!--{fr}Sélectionnez une seule option.--><!--{mi}Tīpakohia kotahi anake te kōwhiringa.--><!--{nl}Selecteer slechts één optie.--><!--{nb}Velg bare ett alternativ.--><!--{pt}Selecione apenas uma opção.--><!--{fi}Valitse vain yksi vaihtoehto.--><!--{sv}Välj bara ett alternativ.--><!--{el}Επιλέξτε μόνο μία επιλογή.--><!--{yu}只揀一個選項。--><!--{ja}オプションを 1 つだけ選択してください。--><!--{kr}옵션을 하나만 선택하세요.-->
+                        </p>
+                        <input type="radio" name="8" id="q8-a1" value="I agree">
+                        <label for="q8-a1">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                I agree
+                                <!--{ca}Estic d'acord--><!--{da}Jeg er enig--><!--{de}Ich stimme zu--><!--{es}Estoy de acuerdo--><!--{fr}Je suis d'accord--><!--{mi}Whakaae ahau--><!--{nl}Ik ben het ermee eens--><!--{nb}Jeg er enig--><!--{pt}Concordo--><!--{fi}Olen samaa mieltä--><!--{sv}Jag håller med--><!--{el}Συμφωνώ--><!--{yu}我同意--><!--{ja}同意します--><!--{kr}나는 동의한다-->
+                            </span>
+                        </label>
+                        <input type="radio" name="8" id="q8-a2" value="I disagree">
+                        <label for="q8-a2">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                I disagree
+                                <!--{ca}No estic d'acord--><!--{da}Jeg er uenig--><!--{de}Ich bin nicht einverstanden--><!--{es}No estoy de acuerdo--><!--{fr}Je ne suis pas d'accord--><!--{mi}Kare au e whakaae--><!--{nl}Ik ben het er niet mee eens--><!--{nb}Jeg er uenig--><!--{pt}Discordo--><!--{fi}Olen eri mieltä--><!--{sv}Jag håller inte med--><!--{el}Διαφωνώ--><!--{yu}我唔同意--><!--{ja}私は同意しません--><!--{kr}나는 동의하지 않는다-->
+                            </span>
+                        </label>
+                        <input type="radio" name="8" id="q8-a3" value="Not sure">
+                        <label for="q8-a3">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Not sure
+                                <!--{ca}No n'estic segur--><!--{da}Ikke sikker--><!--{de}Nicht sicher--><!--{es}No estoy seguro--><!--{fr}Pas sûr--><!--{mi}Kaore i tino mohio--><!--{nl}Ik weet het niet zeker--><!--{nb}Ikke sikker--><!--{pt}Não tenho certeza--><!--{fi}En ole varma--><!--{sv}Inte säker--><!--{el}Δεν είμαι σίγουρος/η--><!--{yu}唔肯定--><!--{ja}わからない--><!--{kr}확실하지 않음-->
+                            </span>
+                        </label>
+                    </div>
+                    <!--Separator-->
+                    <div style="height: 20px; clear: both;"></div>
+                    <div style="width: 100%; height: 1px; background: #ABABAB;"></div>
+                    <div style="clear: both;"></div>
+                    <!--Separator-->
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h3>
+                            9. Do you think social media apps should be designed to be addictive?
+                            <!--{ca}9. Creus que les aplicacions de xarxes socials s'haurien de dissenyar per ser addictives?--><!--{da}9. Synes du, at apps til sociale medier bør designes til at være vanedannende?--><!--{de}9. Glauben Sie, dass Social-Media-Apps so konzipiert sein sollten, dass sie süchtig machen?--><!--{es}9. ¿Crees que las aplicaciones de redes sociales deberían diseñarse para ser adictivas?--><!--{fr}9. Pensez-vous que les applications de médias sociaux devraient être conçues pour créer une dépendance ?--><!--{mi}9. Ki to whakaaro me hangaia nga kaupapa paapori paapori kia noho hei taapiri?--><!--{nl}9. Vind je dat sociale media-apps zo ontworpen moeten worden dat ze verslavend zijn?--><!--{nb}9. Synes du apper for sosiale medier bør være utformet for å være avhengighetsskapende?--><!--{pt}9. Você acha que os aplicativos de mídia social devem ser projetados para serem viciantes?--><!--{fi}9. Pitäisikö sosiaalisen median sovellusten mielestäsi olla riippuvuutta aiheuttavia?--><!--{sv}9. Tycker du att appar för sociala medier borde utformas för att vara beroendeframkallande?--><!--{el}9. Πιστεύετε ότι οι εφαρμογές κοινωνικής δικτύωσης θα έπρεπε να σχεδιάζονται έτσι ώστε να προκαλούν εθισμό;--><!--{yu}9. 你覺得社交媒體應用程式係咪應該設計成會令人上癮？--><!--{ja}9. ソーシャル メディア アプリは中毒性を持つように設計されるべきだと思いますか?--><!--{kr}9. 소셜 미디어 앱은 중독성이 있도록 설계되어야 한다고 생각하시나요?-->
+                        </h3>
+                        <p style="color: #ABABAB; font-style: italic;">
+                            Select only one option.
+                            <!--{ca}Selecciona només una opció--><!--{da}Vælg kun én mulighed.--><!--{de}Wählen Sie nur eine Option aus.--><!--{es}Selecciona sólo una opción.--><!--{fr}Sélectionnez une seule option.--><!--{mi}Tīpakohia kotahi anake te kōwhiringa.--><!--{nl}Selecteer slechts één optie.--><!--{nb}Velg bare ett alternativ.--><!--{pt}Selecione apenas uma opção.--><!--{fi}Valitse vain yksi vaihtoehto.--><!--{sv}Välj bara ett alternativ.--><!--{el}Επιλέξτε μόνο μία επιλογή.--><!--{yu}只揀一個選項。--><!--{ja}オプションを 1 つだけ選択してください。--><!--{kr}옵션을 하나만 선택하세요.-->
+                        </p>
+                        <input type="radio" name="9" id="q9-a1" value="Yes">
+                        <label for="q9-a1">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Yes
+                                <!--{ca}Sí--><!--{da}Ja--><!--{de}Ja--><!--{es}Sí--><!--{fr}Oui--><!--{mi}Ae--><!--{nl}Ja--><!--{nb}Ja--><!--{pt}--><!--{fi}Kyllä--><!--{sv}Ja--><!--{el}Ναί--><!--{yu}係--><!--{ja}はい--><!--{kr}예-->
+                            </span>
+                        </label>
+                        <input type="radio" name="9" id="q9-a2" value="No">
+                        <label for="q9-a2">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                No
+                                <!--{ca}No--><!--{da}Nej--><!--{de}Nein--><!--{es}No--><!--{fr}Non--><!--{mi}Kao--><!--{nl}Nee--><!--{nb}Nei--><!--{pt}Não--><!--{fi}Ei--><!--{sv}Nej--><!--{el}Οχι--><!--{yu}唔得--><!--{ja}いいえ--><!--{kr}아니요-->
+                            </span>
+                        </label>
+                        <input type="radio" name="9" id="q9-a3" value="Not sure">
+                        <label for="q9-a3">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Not sure
+                                <!--{ca}No n'estic segur--><!--{da}Ikke sikker--><!--{de}Nicht sicher--><!--{es}No estoy seguro--><!--{fr}Pas sûr--><!--{mi}Kaore i tino mohio--><!--{nl}Ik weet het niet zeker--><!--{nb}Ikke sikker--><!--{pt}Não tenho certeza--><!--{fi}En ole varma--><!--{sv}Inte säker--><!--{el}Δεν είμαι σίγουρος/η--><!--{yu}唔肯定--><!--{ja}わからない--><!--{kr}확실하지 않음-->
+                            </span>
+                        </label>
+                    </div>
+                    <!--Separator-->
+                    <div style="height: 20px; clear: both;"></div>
+                    <div style="width: 100%; height: 1px; background: #ABABAB;"></div>
+                    <div style="clear: both;"></div>
+                    <!--Separator-->
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h3>
+                            10. Do you think social media apps should go beyond the digital world and invite users to interact in real life and with their surroundings?
+                            <!--{ca}10. Creus que les aplicacions de xarxes socials haurien d'anar més enllà del món digital i convidar els usuaris a interactuar a la vida real i amb el seu entorn?--><!--{da}10. Synes du, at sociale medie-apps bør gå ud over den digitale verden og invitere brugerne til at interagere i det virkelige liv og med deres omgivelser?--><!--{de}10. Glauben Sie, dass Social-Media-Apps über die digitale Welt hinausgehen und Benutzer dazu einladen sollten, im realen Leben und mit ihrer Umgebung zu interagieren?--><!--{es}10. ¿Crees que las aplicaciones de redes sociales deberían ir más allá del mundo digital e invitar a los usuarios a interactuar en la vida real y con su entorno?--><!--{fr}10. Pensez-vous que les applications de médias sociaux devraient aller au-delà du monde numérique et inviter les utilisateurs à interagir dans la vie réelle et avec leur environnement ?--><!--{mi}10. Ki to whakaaro me haere nga tono paapori paapori ki tua atu i te ao matihiko me te tono i nga kaiwhakamahi ki te taunekeneke i roto i te ao tuuturu me o raatau taiao?--><!--{nl}10. Vindt u dat sociale media-apps verder moeten gaan dan de digitale wereld en gebruikers moeten uitnodigen om in het echte leven en met hun omgeving te interacteren?--><!--{nb}10. Synes du apper for sosiale medier bør gå utover den digitale verden og invitere brukere til å samhandle i det virkelige liv og med omgivelsene sine?--><!--{pt}10. Você acha que os aplicativos de mídia social devem ir além do mundo digital e convidar os usuários a interagir na vida real e com o ambiente ao seu redor?--><!--{fi}10. Pitäisikö sosiaalisen median sovellusten mielestäsi mennä digitaalisen maailman ulkopuolelle ja kutsua käyttäjiä vuorovaikutukseen tosielämässä ja ympäristönsä kanssa?--><!--{sv}10. Tycker du att appar för sociala medier borde gå bortom den digitala världen och bjuda in användare att interagera i verkligheten och med sin omgivning?--><!--{el}10. Πιστεύετε ότι οι εφαρμογές κοινωνικής δικτύωσης θα πρέπει να υπερβαίνουν τον ψηφιακό κόσμο και να προσκαλούν τους χρήστες να αλληλεπιδρούν στην πραγματική ζωή και με το περιβάλλον τους;--><!--{yu}10. 你覺得社交媒體應用程式係咪應該超越數碼世界，邀請用戶喺現實生活同周遭互動？--><!--{ja}10. ソーシャル メディア アプリはデジタルの世界を超えて、ユーザーを現実世界や周囲の環境と交流させるべきだと思いますか?--><!--{kr}10. 소셜 미디어 앱이 디지털 세계를 넘어 사용자들이 실제 생활과 주변 환경 속에서 상호작용하도록 유도해야 한다고 생각하시나요?-->
+                        </h3>
+                        <p style="color: #ABABAB; font-style: italic;">
+                            Select only one option.
+                            <!--{ca}Selecciona només una opció--><!--{da}Vælg kun én mulighed.--><!--{de}Wählen Sie nur eine Option aus.--><!--{es}Selecciona sólo una opción.--><!--{fr}Sélectionnez une seule option.--><!--{mi}Tīpakohia kotahi anake te kōwhiringa.--><!--{nl}Selecteer slechts één optie.--><!--{nb}Velg bare ett alternativ.--><!--{pt}Selecione apenas uma opção.--><!--{fi}Valitse vain yksi vaihtoehto.--><!--{sv}Välj bara ett alternativ.--><!--{el}Επιλέξτε μόνο μία επιλογή.--><!--{yu}只揀一個選項。--><!--{ja}オプションを 1 つだけ選択してください。--><!--{kr}옵션을 하나만 선택하세요.-->
+                        </p>
+                        <input type="radio" name="10" id="q10-a1" value="Yes">
+                        <label for="q10-a1">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Yes
+                                <!--{ca}Sí--><!--{da}Ja--><!--{de}Ja--><!--{es}Sí--><!--{fr}Oui--><!--{mi}Ae--><!--{nl}Ja--><!--{nb}Ja--><!--{pt}--><!--{fi}Kyllä--><!--{sv}Ja--><!--{el}Ναί--><!--{yu}係--><!--{ja}はい--><!--{kr}예-->
+                            </span>
+                        </label>
+                        <input type="radio" name="10" id="q10-a2" value="No">
+                        <label for="q10-a2">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                No
+                                <!--{ca}No--><!--{da}Nej--><!--{de}Nein--><!--{es}No--><!--{fr}Non--><!--{mi}Kao--><!--{nl}Nee--><!--{nb}Nei--><!--{pt}Não--><!--{fi}Ei--><!--{sv}Nej--><!--{el}Οχι--><!--{yu}唔得--><!--{ja}いいえ--><!--{kr}아니요-->
+                            </span>
+                        </label>
+                        <input type="radio" name="10" id="q10-a3" value="Not sure">
+                        <label for="q10-a3">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Not sure
+                                <!--{ca}No n'estic segur--><!--{da}Ikke sikker--><!--{de}Nicht sicher--><!--{es}No estoy seguro--><!--{fr}Pas sûr--><!--{mi}Kaore i tino mohio--><!--{nl}Ik weet het niet zeker--><!--{nb}Ikke sikker--><!--{pt}Não tenho certeza--><!--{fi}En ole varma--><!--{sv}Inte säker--><!--{el}Δεν είμαι σίγουρος/η--><!--{yu}唔肯定--><!--{ja}わからない--><!--{kr}확실하지 않음-->
+                            </span>
+                        </label>
+                    </div>
+                    <!--Separator-->
+                    <div style="height: 20px; clear: both;"></div>
+                    <div style="width: 100%; height: 1px; background: #ABABAB;"></div>
+                    <div style="clear: both;"></div>
+                    <!--Separator-->
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h3>
+                            11. What’s the feature you HATE THE MOST from your favourite social media app?
+                            <!--{ca}11. Quina és la funció que MÉS ODIAS de la teva aplicació de xarxes socials preferida?--><!--{da}11. Hvilken funktion HADER du MEST på din yndlingsapp til sociale medier?--><!--{de}11. Welche Funktion Ihrer bevorzugten Social-Media-App hassen Sie am meisten?--><!--{es}11. ¿Cuál es la característica que MÁS ODIAS de tu red social favorita?--><!--{fr}11. Quelle est la fonctionnalité que vous DÉTESTEZ LE PLUS sur votre application de médias sociaux préférée ?--><!--{mi}11. He aha te mea e kinongia ana e koe mai i to taupānga pāpāho pāpori tino pai?--><!--{nl}11. Welke functie van je favoriete social media-app haat je het meest?--><!--{nb}11. Hvilken funksjon HATER du MEST ved din favorittapp for sosiale medier?--><!--{pt}11. Qual é o recurso que você MAIS ODEIA no seu aplicativo de mídia social favorito?--><!--{fi}11. Mitä ominaisuutta VIHAAT ENITEN suosikki some-sovelluksessasi?--><!--{sv}11. Vilken funktion HATAR du MEST på din favoritapp för sociala medier?--><!--{el}11. Ποιο είναι το χαρακτηριστικό που ΜΙΣΕΙΣ ΠΕΡΙΣΣΟΤΕΡΟ από την αγαπημένη σου εφαρμογή κοινωνικής δικτύωσης;--><!--{yu}11. 你最憎嘅社交媒體應用程式有咩功能？--><!--{ja}11. お気に入りのソーシャル メディア アプリで一番嫌いな機能は何ですか?--><!--{kr}11. 당신이 가장 좋아하는 소셜 미디어 앱에서 가장 싫어하는 기능은 무엇입니까?-->
+                        </h3>
+                        <p style="color: #ABABAB; font-style: italic;">
+                            Type an answer
+                            <!--{ca}Escriu una resposta--><!--{da}Skriv et svar--><!--{de}Geben Sie eine Antwort ein--><!--{es}Escribe una respuesta--><!--{fr}Tapez une réponse--><!--{mi}Patohia he whakautu--><!--{nl}Typ een antwoord--><!--{nb}Skriv inn et svar--><!--{pt}Digite uma resposta--><!--{fi}Kirjoita vastaus--><!--{sv}Skriv ett svar--><!--{el}Πληκτρολογήστε μια απάντηση--><!--{yu}輸入答案--><!--{ja}回答を入力してください--><!--{kr}답변을 입력하세요-->
+                        </p>
+                        <input type="text" name="11" id="q11-a">
+                    </div>
+                    <!--Separator-->
+                    <div style="height: 20px; clear: both;"></div>
+                    <div style="width: 100%; height: 1px; background: #ABABAB;"></div>
+                    <div style="clear: both;"></div>
+                    <!--Separator-->
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h3>
+                            12. What’s a feature you really wish a social media app had?
+                            <!--{ca}12. Quina característica t'agradaria que tingués una aplicació de xarxes socials?--><!--{da}12. Hvilken funktion ville du virkelig ønske, at en app til sociale medier havde?--><!--{de}12. Welche Funktion würde sich eine Social-Media-App Ihrer Meinung nach unbedingt wünschen?--><!--{es}12. ¿Qué característica realmente desearías que tuviera una aplicación de redes sociales?--><!--{fr}12. Quelle fonctionnalité souhaiteriez-vous vraiment qu’une application de médias sociaux ait ?--><!--{mi}12. He aha te ahuatanga e tino hiahia ana koe ki tetahi taupānga pāpāho pāpori?--><!--{nl}12. Welke functie zou je absoluut in een social media-app willen hebben?--><!--{nb}12. Hvilken funksjon skulle du virkelig ønske at en app for sosiale medier hadde?--><!--{pt}12. Qual é um recurso que você realmente gostaria que um aplicativo de mídia social tivesse?--><!--{fi}12. Minkä ominaisuuden todella toivoisit some-sovelluksessa olevan?--><!--{sv}12. Vilken funktion önskar du verkligen att en app för sociala medier hade?--><!--{el}12. Ποια είναι μια λειτουργία που θα θέλατε πραγματικά να είχε μια εφαρμογή κοινωνικής δικτύωσης;--><!--{yu}12. 你真係希望社交媒體應用程式有啲咩功能？--><!--{ja}12. ソーシャル メディア アプリに本当に欲しい機能は何ですか?--><!--{kr}12. 소셜 미디어 앱에 꼭 있었으면 하는 기능은 무엇인가요?-->
+                        </h3>
+                        <p style="color: #ABABAB; font-style: italic;">
+                            Type an answer
+                            <!--{ca}Escriu una resposta--><!--{da}Skriv et svar--><!--{de}Geben Sie eine Antwort ein--><!--{es}Escribe una respuesta--><!--{fr}Tapez une réponse--><!--{mi}Patohia he whakautu--><!--{nl}Typ een antwoord--><!--{nb}Skriv inn et svar--><!--{pt}Digite uma resposta--><!--{fi}Kirjoita vastaus--><!--{sv}Skriv ett svar--><!--{el}Πληκτρολογήστε μια απάντηση--><!--{yu}輸入答案--><!--{ja}回答を入力してください--><!--{kr}답변을 입력하세요-->
+                        </p>
+                        <input type="text" name="12" id="q12-a">
+                    </div>
+                    <div style="height: 20px; clear: both;"></div>
+                </div>
+                <br>
+                <br>
+                <div style="width: calc(100% - 40px); max-width: 710px;">
+                    <h3 style="text-align: left;">
+                        Section 3
+                        <!--{ca}Secció 3--><!--{da}Sektion 3--><!--{de}Abschnitt 3--><!--{es}Sección 3--><!--{fr}Section 3--><!--{mi}Wāhanga 3--><!--{nl}Sectie 3--><!--{nb}Seksjon 3--><!--{pt}Seção 3--><!--{fi}Osa 3--><!--{sv}Section 3--><!--{el}Τμήμα 3--><!--{yu}第 3 節--><!--{ja}セクション3--><!--{kr}섹션 3-->
+                    </h3>
+                </div>
+                <div class="container" style="width: calc(100% - 40px); max-width: 710px; border-radius: 20px; overflow: hidden; height: auto; margin-top: 20px;">
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h3>
+                            13. Do you think there should be space for propaganda, political figures, state-promoted media or any other type of content that involves a government or politics within social media apps?
+                            <!--{ca}13. Creus que hi hauria d'haver espai per a la propaganda, les figures polítiques, els mitjans de comunicació promoguts per l'estat o qualsevol altre tipus de contingut que impliqui un govern o la política dins de les aplicacions de xarxes socials?--><!--{da}13. Synes du, at der bør være plads til propaganda, politiske figurer, statsstøttede medier eller enhver anden form for indhold, der involverer en regering eller politik, inden for sociale medieapps?--><!--{de}13. Glauben Sie, dass in Social-Media-Apps Platz für Propaganda, politische Persönlichkeiten, staatlich geförderte Medien oder andere Arten von Inhalten sein sollte, die sich mit der Regierung oder Politik befassen?--><!--{es}13. ¿Crees que debería haber espacio para propaganda, figuras políticas, medios promocionados por el Estado o cualquier otro tipo de contenido que involucre a un gobierno o la política dentro de las aplicaciones de redes sociales?--><!--{fr}13. Pensez-vous qu’il devrait y avoir de la place pour la propagande, les personnalités politiques, les médias promus par l’État ou tout autre type de contenu impliquant un gouvernement ou la politique dans les applications de médias sociaux ?--><!--{mi}13. Ki to whakaaro me whai waahi mo te whakatö-whakaaro, te hunga torangapu, te hunga panui a te kawanatanga me etahi atu momo korero e pa ana ki te kawanatanga, ki nga kaupapa torangapu ranei i roto i nga taupānga pāpāho pāpori?--><!--{nl}13. Vindt u dat er binnen socialemedia-apps ruimte moet zijn voor propaganda, politici, door de staat gepromote media of andere soorten content die met de overheid of politiek te maken hebben?--><!--{nb}13. Synes du det bør være plass til propaganda, politiske figurer, statlig promoterte medier eller annen type innhold som involverer en regjering eller politikk i sosiale medieapper?--><!--{pt}13. Você acha que deveria haver espaço para propaganda, figuras políticas, mídia promovida pelo Estado ou qualquer outro tipo de conteúdo que envolva governo ou política em aplicativos de mídia social?--><!--{fi}13. Pitäisikö mielestäsi olla tilaa propagandalle, poliittisille henkilöille, valtion mainostamalle medialle tai muunlaiselle sisällölle, joka liittyy hallitukseen tai politiikkaan sosiaalisen median sovelluksissa?--><!--{sv}13. Tycker du att det borde finnas utrymme för propaganda, politiska personer, statligt marknadsförd media eller någon annan typ av innehåll som involverar en regering eller politik inom sociala medieappar?--><!--{el}13. Πιστεύετε ότι θα πρέπει να υπάρχει χώρος για προπαγάνδα, πολιτικά πρόσωπα, κρατικά προωθούμενα μέσα ενημέρωσης ή οποιοδήποτε άλλο είδος περιεχομένου που αφορά την κυβέρνηση ή την πολιτική στις εφαρμογές κοινωνικής δικτύωσης;--><!--{yu}13. 你覺得社交媒體應用程式入面係咪應該有空間畀文宣、政治人物、國家宣傳嘅媒體或者任何其他類型嘅內容，涉及政府或者政治？--><!--{ja}13. ソーシャルメディア アプリ内に、プロパガンダ、政治家、国が推進するメディア、その他政府や政治に関わるあらゆる種類のコンテンツのための余地があるべきだと思いますか?--><!--{kr}13. 소셜 미디어 앱에 정부나 정치와 관련된 선전, 정치인, 국가가 홍보하는 미디어 또는 기타 유형의 콘텐츠를 위한 공간이 있어야 한다고 생각하십니까?-->
+                        </h3>
+                        <p style="color: #ABABAB; font-style: italic;">
+                            Select only one option.
+                            <!--{ca}Selecciona només una opció--><!--{da}Vælg kun én mulighed.--><!--{de}Wählen Sie nur eine Option aus.--><!--{es}Selecciona sólo una opción.--><!--{fr}Sélectionnez une seule option.--><!--{mi}Tīpakohia kotahi anake te kōwhiringa.--><!--{nl}Selecteer slechts één optie.--><!--{nb}Velg bare ett alternativ.--><!--{pt}Selecione apenas uma opção.--><!--{fi}Valitse vain yksi vaihtoehto.--><!--{sv}Välj bara ett alternativ.--><!--{el}Επιλέξτε μόνο μία επιλογή.--><!--{yu}只揀一個選項。--><!--{ja}オプションを 1 つだけ選択してください。--><!--{kr}옵션을 하나만 선택하세요.-->
+                        </p>
+                        <input type="radio" name="13" id="q13-a1" value="Yes">
+                        <label for="q13-a1">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Yes
+                                <!--{ca}Sí--><!--{da}Ja--><!--{de}Ja--><!--{es}Sí--><!--{fr}Oui--><!--{mi}Ae--><!--{nl}Ja--><!--{nb}Ja--><!--{pt}--><!--{fi}Kyllä--><!--{sv}Ja--><!--{el}Ναί--><!--{yu}係--><!--{ja}はい--><!--{kr}예-->
+                            </span>
+                        </label>
+                        <input type="radio" name="13" id="q13-a2" value="No">
+                        <label for="q13-a2">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                No
+                                <!--{ca}No--><!--{da}Nej--><!--{de}Nein--><!--{es}No--><!--{fr}Non--><!--{mi}Kao--><!--{nl}Nee--><!--{nb}Nei--><!--{pt}Não--><!--{fi}Ei--><!--{sv}Nej--><!--{el}Οχι--><!--{yu}唔得--><!--{ja}いいえ--><!--{kr}아니요-->
+                            </span>
+                        </label>
+                        <input type="radio" name="13" id="q13-a3" value="Not sure">
+                        <label for="q13-a3">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Not sure
+                                <!--{ca}No n'estic segur--><!--{da}Ikke sikker--><!--{de}Nicht sicher--><!--{es}No estoy seguro--><!--{fr}Pas sûr--><!--{mi}Kaore i tino mohio--><!--{nl}Ik weet het niet zeker--><!--{nb}Ikke sikker--><!--{pt}Não tenho certeza--><!--{fi}En ole varma--><!--{sv}Inte säker--><!--{el}Δεν είμαι σίγουρος/η--><!--{yu}唔肯定--><!--{ja}わからない--><!--{kr}확실하지 않음-->
+                            </span>
+                        </label>
+                    </div>
+                    <!--Separator-->
+                    <div style="height: 20px; clear: both;"></div>
+                    <div style="width: 100%; height: 1px; background: #ABABAB;"></div>
+                    <div style="clear: both;"></div>
+                    <!--Separator-->
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h3>
+                            14. Do you think social media applications should implement stronger fact-checking mechanisms to prevent harmful content towards community members?
+                            <!--{ca}14. Creus que les aplicacions de xarxes socials haurien d'implementar mecanismes de verificació de fets més forts per evitar continguts nocius per als membres de la comunitat?--><!--{da}14. Synes du, at sociale medieapplikationer bør implementere stærkere faktatjekmekanismer for at forhindre skadeligt indhold rettet mod medlemmer af fællesskabet?--><!--{de}14. Sind Sie der Meinung, dass Social-Media-Anwendungen stärkere Mechanismen zur Faktenprüfung implementieren sollten, um schädliche Inhalte für Community-Mitglieder zu verhindern?--><!--{es}14. ¿Crees que las aplicaciones de redes sociales deberían implementar mecanismos de verificación de datos más fuertes para prevenir contenido dañino hacia los miembros de la comunidad?--><!--{fr}14. Pensez-vous que les applications de médias sociaux devraient mettre en œuvre des mécanismes de vérification des faits plus solides pour empêcher les contenus préjudiciables aux membres de la communauté ?--><!--{mi}14. Ki to whakaaro me whakamahi nga tono paapori paapori i nga tikanga arowhai meka kaha ake hei aukati i nga korero kino ki nga mema o te hapori?--><!--{nl}14. Bent u van mening dat sociale media-applicaties sterkere mechanismen voor feitencontrole moeten implementeren om schadelijke inhoud voor leden van de community te voorkomen?--><!--{nb}14. Synes du at sosiale medier-applikasjoner bør implementere sterkere faktasjekkmekanismer for å forhindre skadelig innhold rettet mot medlemmer av fellesskapet?--><!--{pt}14. Você acha que os aplicativos de mídia social deveriam implementar mecanismos mais fortes de verificação de fatos para evitar conteúdo prejudicial aos membros da comunidade?--><!--{fi}14. Pitäisikö sosiaalisen median sovellusten mielestäsi ottaa käyttöön vahvempia faktantarkistusmekanismeja estääkseen yhteisön jäsenille haitallisen sisällön?--><!--{sv}14. Tycker du att sociala medieapplikationer borde implementera starkare faktakontrollmekanismer för att förhindra skadligt innehåll riktat mot medlemmar i communityn?--><!--{el}14. Πιστεύετε ότι οι εφαρμογές κοινωνικής δικτύωσης θα πρέπει να εφαρμόζουν ισχυρότερους μηχανισμούς επαλήθευσης γεγονότων για την αποτροπή επιβλαβούς περιεχομένου προς τα μέλη της κοινότητας;--><!--{yu}14. 你認為社交媒體應用程式係咪應該實行更強大嘅事實檢查機制，以防止對社群成員嘅有害內容？--><!--{ja}14. ソーシャル メディア アプリケーションは、コミュニティ メンバーに対する有害なコンテンツを防ぐために、より強力なファクトチェック メカニズムを実装する必要があると思いますか?--><!--{kr}14. 소셜 미디어 애플리케이션이 커뮤니티 구성원을 향한 유해한 콘텐츠를 방지하기 위해 더 강력한 사실 확인 메커니즘을 구현해야 한다고 생각하십니까?-->
+                        </h3>
+                        <p style="color: #ABABAB; font-style: italic;">
+                            Select only one option.
+                            <!--{ca}Selecciona només una opció--><!--{da}Vælg kun én mulighed.--><!--{de}Wählen Sie nur eine Option aus.--><!--{es}Selecciona sólo una opción.--><!--{fr}Sélectionnez une seule option.--><!--{mi}Tīpakohia kotahi anake te kōwhiringa.--><!--{nl}Selecteer slechts één optie.--><!--{nb}Velg bare ett alternativ.--><!--{pt}Selecione apenas uma opção.--><!--{fi}Valitse vain yksi vaihtoehto.--><!--{sv}Välj bara ett alternativ.--><!--{el}Επιλέξτε μόνο μία επιλογή.--><!--{yu}只揀一個選項。--><!--{ja}オプションを 1 つだけ選択してください。--><!--{kr}옵션을 하나만 선택하세요.-->
+                        </p>
+                        <input type="radio" name="14" id="q14-a1" value="Yes">
+                        <label for="q14-a1">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Yes
+                                <!--{ca}Sí--><!--{da}Ja--><!--{de}Ja--><!--{es}Sí--><!--{fr}Oui--><!--{mi}Ae--><!--{nl}Ja--><!--{nb}Ja--><!--{pt}--><!--{fi}Kyllä--><!--{sv}Ja--><!--{el}Ναί--><!--{yu}係--><!--{ja}はい--><!--{kr}예-->
+                            </span>
+                        </label>
+                        <input type="radio" name="14" id="q14-a2" value="No">
+                        <label for="q14-a2">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                No
+                                <!--{ca}No--><!--{da}Nej--><!--{de}Nein--><!--{es}No--><!--{fr}Non--><!--{mi}Kao--><!--{nl}Nee--><!--{nb}Nei--><!--{pt}Não--><!--{fi}Ei--><!--{sv}Nej--><!--{el}Οχι--><!--{yu}唔得--><!--{ja}いいえ--><!--{kr}아니요-->
+                            </span>
+                        </label>
+                        <input type="radio" name="14" id="q14-a3" value="Not sure">
+                        <label for="q14-a3">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Not sure
+                                <!--{ca}No n'estic segur--><!--{da}Ikke sikker--><!--{de}Nicht sicher--><!--{es}No estoy seguro--><!--{fr}Pas sûr--><!--{mi}Kaore i tino mohio--><!--{nl}Ik weet het niet zeker--><!--{nb}Ikke sikker--><!--{pt}Não tenho certeza--><!--{fi}En ole varma--><!--{sv}Inte säker--><!--{el}Δεν είμαι σίγουρος/η--><!--{yu}唔肯定--><!--{ja}わからない--><!--{kr}확실하지 않음-->
+                            </span>
+                        </label>
+                    </div>
+                    <!--Separator-->
+                    <div style="height: 20px; clear: both;"></div>
+                    <div style="width: 100%; height: 1px; background: #ABABAB;"></div>
+                    <div style="clear: both;"></div>
+                    <!--Separator-->
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h3>
+                            15. What are the topics you’ve seen most about on social media since the start of the school year?
+                            <!--{ca}15. Quins són els temes que més has vist a les xarxes socials des de l'inici del curs escolar?--><!--{da}15. Hvilke emner har du set mest om på sociale medier siden skoleårets start?--><!--{de}15. Welche Themen haben Sie seit Beginn des Schuljahres am häufigsten in den sozialen Medien gesehen?--><!--{es}15. ¿Cuáles son los temas que más has visto en las redes sociales desde el inicio del año escolar?--><!--{fr}15. Quels sont les sujets que vous avez le plus vus sur les réseaux sociaux depuis la rentrée scolaire ?--><!--{mi}15. He aha nga kaupapa kua tino kitea e koe i runga i nga paapori pāpori mai i te timatanga o te tau kura?--><!--{nl}15. Hvilke temaer har du sett mest om på sosiale medier siden skolestart?--><!--{nb}--><!--{pt}15. Quais são os tópicos que você mais viu nas redes sociais desde o início do ano letivo?--><!--{fi}15. Mistä aiheista olet nähnyt eniten sosiaalisessa mediassa lukuvuoden alun jälkeen?--><!--{sv}15. Vilka ämnen har du sett mest om på sociala medier sedan skolstarten?--><!--{el}15. Ποια είναι τα θέματα που έχετε δει περισσότερο στα μέσα κοινωνικής δικτύωσης από την αρχή της σχολικής χρονιάς;--><!--{yu}15. 自從學年開始以嚟，你喺社交媒體上面見到最多嘅話題係啲咩？--><!--{ja}15. 新学期が始まって以来、ソーシャルメディアで最も多く見られたトピックは何ですか?--><!--{kr}15. 학년이 시작된 이후 소셜 미디어에서 가장 많이 본 주제는 무엇입니까?-->
+                        </h3>
+                        <p style="color: #ABABAB; font-style: italic;">
+                            Select all options that apply.
+                            <!--{ca}Selecciona totes les opcions que corresponguin.--><!--{da}Vælg alle relevante muligheder.--><!--{de}Wählen Sie alle zutreffenden Optionen aus.--><!--{es}Selecciona todas las opciones que apliquen.--><!--{fr}Sélectionnez toutes les options qui s’appliquent.--><!--{mi}Tīpakohia ngā kōwhiringa katoa e hāngai ana.--><!--{nl}Selecteer alle opties die van toepassing zijn.--><!--{nb}Velg alle alternativene som gjelder.--><!--{pt}Selecione todas as opções aplicáveis.--><!--{fi}Valitse kaikki sopivat vaihtoehdot.--><!--{sv}Markera alla alternativ som gäller.--><!--{el}Επιλέξτε όλες τις επιλογές που ισχύουν.--><!--{yu}揀所有適用嘅選項。--><!--{ja}該当するオプションをすべて選択します。--><!--{kr}해당되는 모든 옵션을 선택하세요.-->
+                        </p>
+                        <input type="checkbox" name="15" id="q15-a1" value="Education">
+                        <label for="q15-a1">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Education
+                                <!--{ca}Educació--><!--{da}Undervisning--><!--{de}Ausbildung--><!--{es}Educación--><!--{fr}Éducation--><!--{mi}Mātauranga--><!--{nl}Onderwijs--><!--{nb}Utdannelse--><!--{pt}Educação--><!--{fi}Koulutus--><!--{sv}Utbildning--><!--{el}Εκπαίδευση--><!--{yu}教育--><!--{ja}教育--><!--{kr}교육-->
+                            </span>
+                        </label>
+                        <input type="checkbox" name="15" id="q15-a2" value="Entertainment">
+                        <label for="q15-a2">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Entertainment
+                                <!--{ca}Entreteniment--><!--{da}Underholdning--><!--{de}Unterhaltung--><!--{es}Entretenimiento--><!--{fr}Divertissement--><!--{mi}Whakangahau--><!--{nl}Vermaak--><!--{nb}Underholdning--><!--{pt}Entretenimento--><!--{fi}Viihde--><!--{sv}Underhållning--><!--{el}Ψυχαγωγία--><!--{yu}娛樂--><!--{ja}エンターテインメント--><!--{kr}오락-->
+                            </span>
+                        </label>
+                        <input type="checkbox" name="15" id="q15-a3" value="Fashion">
+                        <label for="q15-a3">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Fashion
+                                <!--{ca}Moda--><!--{da}Mode--><!--{de}Mode--><!--{es}Moda--><!--{fr}Mode--><!--{mi}Huahua--><!--{nl}Mode--><!--{nb}Mote--><!--{pt}Moda--><!--{fi}Muoti--><!--{sv}Mode--><!--{el}Μόδα--><!--{yu}時裝--><!--{ja}ファッション--><!--{kr}패션-->
+                            </span>
+                        </label>
+                        <input type="checkbox" name="15" id="q15-a4" value="Environment">
+                        <label for="q15-a4">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Environment
+                                <!--{ca}Medi ambient--><!--{da}Miljø--><!--{de}Umfeld--><!--{es}Medioambiente--><!--{fr}Environnement--><!--{mi}Taiao--><!--{nl}Omgeving--><!--{nb}Miljø--><!--{pt}Ambiente--><!--{fi}Ympäristö--><!--{sv}Miljö--><!--{el}Περιβάλλο--><!--{yu}環境--><!--{ja}環境--><!--{kr}환경-->
+                            </span>
+                        </label>
+                        <input type="checkbox" name="15" id="q15-a5" value="Politics">
+                        <label for="q15-a5">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Politics
+                                <!--{ca}Política--><!--{da}Politik--><!--{de}Politik--><!--{es}Política--><!--{fr}Politique--><!--{mi}Torangapu--><!--{nl}Politiek--><!--{nb}Politikk--><!--{pt}Política--><!--{fi}Politiikka--><!--{sv}Politik--><!--{el}Πολιτική--><!--{yu}政治--><!--{ja}政治--><!--{kr}정치-->
+                            </span>
+                        </label>
+                        <input type="checkbox" name="15" id="q15-a6" value="Design">
+                        <label for="q15-a6">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Design
+                                <!--{ca}Disseny--><!--{da}Design--><!--{de}Design--><!--{es}Diseño--><!--{fr}Désign--><!--{mi}Hoahoa--><!--{nl}Ontwerp--><!--{nb}Design--><!--{pt}Desenho--><!--{fi}Design--><!--{sv}Design--><!--{el}Σχεδιάζω--><!--{yu}設計--><!--{ja}デザイン--><!--{kr}설계-->
+                            </span>
+                        </label>
+                        <input type="checkbox" name="15" id="q15-a7" value="Climate change">
+                        <label for="q15-a7">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Climate change
+                                <!--{ca}Canvi climàtic--><!--{da}Klimaforandringer--><!--{de}Klimawandel--><!--{es}Cambio climático--><!--{fr}Changement climatique--><!--{mi}Te huringa o te rangi--><!--{nl}Klimaatverandering--><!--{nb}Klimaendringer--><!--{pt}Mudanças climáticas--><!--{fi}Ilmastonmuutos--><!--{sv}Klimatförändringar--><!--{el}Κλιματική αλλαγή--><!--{yu}氣候變化--><!--{ja}気候変動--><!--{kr}기후 변화-->
+                            </span>
+                        </label>
+                        <input type="checkbox" name="15" id="q15-a8" value="Nature">
+                        <label for="q15-a8">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Nature
+                                <!--{ca}Natura--><!--{da}Natur--><!--{de}Natur--><!--{es}Naturaleza--><!--{fr}Nature--><!--{mi}Taiao--><!--{nl}Natuur--><!--{nb}Natur--><!--{pt}Natureza--><!--{fi}Luonto--><!--{sv}Natur--><!--{el}Φύση--><!--{yu}大自然--><!--{ja}自然--><!--{kr}자연-->
+                            </span>
+                        </label>
+                        <input type="checkbox" name="15" id="q15-a9" value="Technology">
+                        <label for="q15-a9">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Technology
+                                <!--{ca}Tecnologia--><!--{da}Teknologi--><!--{de}Technologie--><!--{es}Tecnología--><!--{fr}Technologie--><!--{mi}Hangarau--><!--{nl}Technologie--><!--{nb}Teknologi--><!--{pt}Tecnologia--><!--{fi}Teknologia--><!--{sv}Teknologi--><!--{el}Τεχνολογία--><!--{yu}技術--><!--{ja}テクノロジー--><!--{kr}기술-->
+                            </span>
+                        </label>
+                        <input type="checkbox" name="15" id="q15-a10" value="Economy">
+                        <label for="q15-a10">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Economy
+                                <!--{ca}Economia--><!--{da}Økonomi--><!--{de}Wirtschaft--><!--{es}Economía--><!--{fr}Économie--><!--{mi}Ohanga--><!--{nl}Economie--><!--{nb}Økonomi--><!--{pt}Economia--><!--{fi}Talous--><!--{sv}Ekonomi--><!--{el}Οικονομία--><!--{yu}經濟--><!--{ja}経済--><!--{kr}경제-->
+                            </span>
+                        </label>
+                    </div>
+                    <!--Separator-->
+                    <div style="height: 20px; clear: both;"></div>
+                    <div style="width: 100%; height: 1px; background: #ABABAB;"></div>
+                    <div style="clear: both;"></div>
+                    <!--Separator-->
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h3>
+                            16. Have you encountered any type of publication containing clear indicators of propaganda, fascism, racism, LGBTQ-phobia, or other types of political, social, or economic extremism in the past year?
+                            <!--{ca}16. Heu trobat algun tipus de publicació que contingui indicadors clars de propaganda, feixisme, racisme, LGBTQ-fòbia o altres tipus d'extremisme polític, social o econòmic durant l'últim any?--><!--{da}16. Har du i det seneste år stødt på nogen form for publikation, der indeholder klare indikationer på propaganda, fascisme, racisme, LGBTQ-fobi eller andre former for politisk, social eller økonomisk ekstremisme?--><!--{de}16. Sind Sie im vergangenen Jahr auf Veröffentlichungen gestoßen, die eindeutige Anzeichen von Propaganda, Faschismus, Rassismus, LGBTQ-Phobie oder anderen Formen von politischem, sozialem oder wirtschaftlichem Extremismus enthielten?--><!--{es}16. ¿Has encontrado algún tipo de publicación que contenga claros indicadores de propaganda, fascismo, racismo, LGBTQ-fobia u otros tipos de extremismo político, social o económico en el último año?--><!--{fr}16. Avez-vous rencontré un type de publication contenant des indicateurs clairs de propagande, de fascisme, de racisme, de LGBTQ-phobie ou d’autres types d’extrémisme politique, social ou économique au cours de l’année écoulée ?--><!--{mi}16. Kua tutaki koe ki tetahi momo whakaputanga kei roto nga tohu maamaa mo te whakatö-whakaaro, fascism, racism, LGBTQ-phobia, etahi atu momo torangapu, hapori, ohaoha ranei i te tau kua hipa?--><!--{nl}16. Bent u het afgelopen jaar publicaties tegengekomen die duidelijke aanwijzingen bevatten voor propaganda, fascisme, racisme, LGBTQ-fobie of andere vormen van politiek, sociaal of economisch extremisme?--><!--{nb}16. Har du i løpet av det siste året kommet over noen form for publikasjon som inneholder klare indikasjoner på propaganda, fascisme, rasisme, LHBTQ-fobi eller andre typer politisk, sosial eller økonomisk ekstremisme?--><!--{pt}16. Você encontrou algum tipo de publicação contendo indicadores claros de propaganda, fascismo, racismo, LGBTQfobia ou outros tipos de extremismo político, social ou econômico no ano passado?--><!--{fi}16. Oletko viimeisen vuoden aikana havainnut julkaisuja, jotka sisältävät selviä viitteitä propagandasta, fasismista, rasismista, LGBTQ-fobiasta tai muunlaisesta poliittisesta, sosiaalisesta tai taloudellisesta ääriajattelusta?--><!--{sv}16. Har du stött på någon typ av publikation som innehåller tydliga tecken på propaganda, fascism, rasism, HBTQ-fobi eller andra typer av politisk, social eller ekonomisk extremism under det senaste året?--><!--{el}16. Έχετε συναντήσει κάποιο είδος δημοσίευσης που να περιέχει σαφείς ενδείξεις προπαγάνδας, φασισμού, ρατσισμού, ΛΟΑΤΚΙ+ φοβίας ή άλλων μορφών πολιτικού, κοινωνικού ή οικονομικού εξτρεμισμού τον τελευταίο χρόνο;--><!--{yu}16. 你喺過去一年有冇遇到任何類型嘅出版物，當中包含宣傳、法西斯主義、種族主義、 LGBTQ 恐懼症或者其他類型嘅政治、社會或經濟極端主義嘅明確指標？--><!--{ja}16. 過去 1 年間に、プロパガンダ、ファシズム、人種差別、LGBTQ 恐怖症、またはその他の政治的、社会的、または経済的過激主義を明確に示す出版物に遭遇しましたか?--><!--{kr}16. 지난 1년 동안 선전, 파시즘, 인종차별, LGBTQ 혐오증 또는 기타 유형의 정치적, 사회적, 경제적 극단주의를 명확히 나타내는 출판물을 접한 적이 있습니까?-->
+                        </h3>
+                        <p style="color: #ABABAB; font-style: italic;">
+                            Select only one option.
+                            <!--{ca}Selecciona només una opció--><!--{da}Vælg kun én mulighed.--><!--{de}Wählen Sie nur eine Option aus.--><!--{es}Selecciona sólo una opción.--><!--{fr}Sélectionnez une seule option.--><!--{mi}Tīpakohia kotahi anake te kōwhiringa.--><!--{nl}Selecteer slechts één optie.--><!--{nb}Velg bare ett alternativ.--><!--{pt}Selecione apenas uma opção.--><!--{fi}Valitse vain yksi vaihtoehto.--><!--{sv}Välj bara ett alternativ.--><!--{el}Επιλέξτε μόνο μία επιλογή.--><!--{yu}只揀一個選項。--><!--{ja}オプションを 1 つだけ選択してください。--><!--{kr}옵션을 하나만 선택하세요.-->
+                        </p>
+                        <input type="radio" name="16" id="q16-a1" value="Yes">
+                        <label for="q16-a1">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Yes
+                                <!--{ca}Sí--><!--{da}Ja--><!--{de}Ja--><!--{es}Sí--><!--{fr}Oui--><!--{mi}Ae--><!--{nl}Ja--><!--{nb}Ja--><!--{pt}--><!--{fi}Kyllä--><!--{sv}Ja--><!--{el}Ναί--><!--{yu}係--><!--{ja}はい--><!--{kr}예-->
+                            </span>
+                        </label>
+                        <input type="radio" name="16" id="q16-a2" value="No">
+                        <label for="q16-a2">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                No
+                                <!--{ca}No--><!--{da}Nej--><!--{de}Nein--><!--{es}No--><!--{fr}Non--><!--{mi}Kao--><!--{nl}Nee--><!--{nb}Nei--><!--{pt}Não--><!--{fi}Ei--><!--{sv}Nej--><!--{el}Οχι--><!--{yu}唔得--><!--{ja}いいえ--><!--{kr}아니요-->
+                            </span>
+                        </label>
+                        <input type="radio" name="16" id="q16-a3" value="Not sure">
+                        <label for="q16-a3">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Not sure
+                                <!--{ca}No n'estic segur--><!--{da}Ikke sikker--><!--{de}Nicht sicher--><!--{es}No estoy seguro--><!--{fr}Pas sûr--><!--{mi}Kaore i tino mohio--><!--{nl}Ik weet het niet zeker--><!--{nb}Ikke sikker--><!--{pt}Não tenho certeza--><!--{fi}En ole varma--><!--{sv}Inte säker--><!--{el}Δεν είμαι σίγουρος/η--><!--{yu}唔肯定--><!--{ja}わからない--><!--{kr}확실하지 않음-->
+                            </span>
+                        </label>
+                    </div>
+                    <!--Separator-->
+                    <div style="height: 20px; clear: both;"></div>
+                    <div style="width: 100%; height: 1px; background: #ABABAB;"></div>
+                    <div style="clear: both;"></div>
+                    <!--Separator-->
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h3>
+                            17. Do you understand what Python-based algorithms are and what they’re used for?
+                            <!--{ca}17. Entens què són els algoritmes basats en Python i per a què serveixen?--><!--{da}17. Forstår du, hvad Python-baserede algoritmer er, og hvad de bruges til?--><!--{de}17. Verstehen Sie, was Python-basierte Algorithmen sind und wofür sie verwendet werden?--><!--{es}17. ¿Entiendes qué son los algoritmos basados ​​en Python y para qué se utilizan?--><!--{fr}17. Comprenez-vous ce que sont les algorithmes basés sur Python et à quoi ils servent ?--><!--{mi}17. Kei te mohio koe he aha te Python-based algorithms me te aha e whakamahia ana?--><!--{nl}17. Begrijp je wat Python-gebaseerde algoritmen zijn en waarvoor ze worden gebruikt?--><!--{nb}17. Forstår du hva Python-baserte algoritmer er og hva de brukes til?--><!--{pt}17. Você entende o que são algoritmos baseados em Python e para que eles são usados?--><!--{fi}17. Ymmärrätkö, mitä Python-pohjaiset algoritmit ovat ja mihin niitä käytetään?--><!--{sv}17. Förstår du vad Python-baserade algoritmer är och vad de används till?--><!--{el}17. Κατανοείτε τι είναι οι αλγόριθμοι που βασίζονται σε Python και σε τι χρησιμοποιούνται;--><!--{yu}17. 你明唔明咩係基於 Python 嘅算法同埋佢哋用嚟做乜？--><!--{ja}17. Python ベースのアルゴリズムとは何か、そしてそれが何に使用されるのか理解していますか?--><!--{kr}17. 파이썬 기반 알고리즘이 무엇이고, 어떤 용도로 사용되는지 알고 있나요?-->
+                        </h3>
+                        <p style="color: #ABABAB; font-style: italic;">
+                            Select only one option.
+                            <!--{ca}Selecciona només una opció--><!--{da}Vælg kun én mulighed.--><!--{de}Wählen Sie nur eine Option aus.--><!--{es}Selecciona sólo una opción.--><!--{fr}Sélectionnez une seule option.--><!--{mi}Tīpakohia kotahi anake te kōwhiringa.--><!--{nl}Selecteer slechts één optie.--><!--{nb}Velg bare ett alternativ.--><!--{pt}Selecione apenas uma opção.--><!--{fi}Valitse vain yksi vaihtoehto.--><!--{sv}Välj bara ett alternativ.--><!--{el}Επιλέξτε μόνο μία επιλογή.--><!--{yu}只揀一個選項。--><!--{ja}オプションを 1 つだけ選択してください。--><!--{kr}옵션을 하나만 선택하세요.-->
+                        </p>
+                        <input type="radio" name="17" id="q17-a1" value="Yes">
+                        <label for="q17-a1">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Yes
+                                <!--{ca}Sí--><!--{da}Ja--><!--{de}Ja--><!--{es}Sí--><!--{fr}Oui--><!--{mi}Ae--><!--{nl}Ja--><!--{nb}Ja--><!--{pt}--><!--{fi}Kyllä--><!--{sv}Ja--><!--{el}Ναί--><!--{yu}係--><!--{ja}はい--><!--{kr}예-->
+                            </span>
+                        </label>
+                        <input type="radio" name="17" id="q17-a2" value="No">
+                        <label for="q17-a2">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                No
+                                <!--{ca}No--><!--{da}Nej--><!--{de}Nein--><!--{es}No--><!--{fr}Non--><!--{mi}Kao--><!--{nl}Nee--><!--{nb}Nei--><!--{pt}Não--><!--{fi}Ei--><!--{sv}Nej--><!--{el}Οχι--><!--{yu}唔得--><!--{ja}いいえ--><!--{kr}아니요-->
+                            </span>
+                        </label>
+                        <input type="radio" name="17" id="q17-a3" value="Not sure">
+                        <label for="q17-a3">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Not sure
+                                <!--{ca}No n'estic segur--><!--{da}Ikke sikker--><!--{de}Nicht sicher--><!--{es}No estoy seguro--><!--{fr}Pas sûr--><!--{mi}Kaore i tino mohio--><!--{nl}Ik weet het niet zeker--><!--{nb}Ikke sikker--><!--{pt}Não tenho certeza--><!--{fi}En ole varma--><!--{sv}Inte säker--><!--{el}Δεν είμαι σίγουρος/η--><!--{yu}唔肯定--><!--{ja}わからない--><!--{kr}확실하지 않음-->
+                            </span>
+                        </label>
+                    </div>
+                    <!--Separator-->
+                    <div style="height: 20px; clear: both;"></div>
+                    <div style="width: 100%; height: 1px; background: #ABABAB;"></div>
+                    <div style="clear: both;"></div>
+                    <!--Separator-->
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h3>
+                            18. What do you think of companies forcing users on their platforms to consent to the analysis of their public profiles and content to train artificial intelligence technologies?
+                            <!--{ca}18. Què en penseu de les empreses que obliguen els usuaris de les seves plataformes a consentir l'anàlisi dels seus perfils públics i contingut per entrenar tecnologies d'intel·ligència artificial?--><!--{da}18. Hvad synes du om virksomheder, der tvinger brugere på deres platforme til at samtykke til analyse af deres offentlige profiler og indhold for at træne kunstig intelligens-teknologier?--><!--{de}18. Was halten Sie davon, dass Unternehmen die Nutzer ihrer Plattformen dazu zwingen, der Analyse ihrer öffentlichen Profile und Inhalte zuzustimmen, um Technologien der künstlichen Intelligenz zu trainieren?--><!--{es}18. ¿Qué opinas de que las empresas obliguen a los usuarios de sus plataformas a dar su consentimiento para el análisis de sus perfiles y contenidos públicos para entrenar tecnologías de inteligencia artificial?--><!--{fr}18. Que pensez-vous des entreprises qui obligent les utilisateurs de leurs plateformes à consentir à l’analyse de leurs profils publics et de leur contenu pour former des technologies d’intelligence artificielle ?--><!--{mi}18. He aha to whakaaro mo nga kamupene e akiaki ana i nga kaiwhakamahi i runga i o raatau papaaho kia whakaae ki te wetewete i o raatau korero a te iwi me o raatau ihirangi ki te whakangungu i nga hangarau mohiotanga?--><!--{nl}18. Wat vindt u ervan dat bedrijven gebruikers op hun platforms dwingen toestemming te geven voor de analyse van hun openbare profielen en content om technologieën voor kunstmatige intelligentie te trainen?--><!--{nb}18. Hva synes du om at selskaper tvinger brukere på plattformene sine til å samtykke til analyse av offentlige profiler og innhold for å trene opp kunstig intelligens-teknologier?--><!--{pt}18. O que você acha de empresas que obrigam os usuários em suas plataformas a consentir a análise de seus perfis e conteúdos públicos para treinar tecnologias de inteligência artificial?--><!--{fi}18. Mitä mieltä olet yrityksistä, jotka pakottavat alustojensa käyttäjät suostumaan julkisten profiiliensa ja sisältönsä analysointiin tekoälyteknologioiden kouluttamiseksi?--><!--{sv}18. Vad tycker du om att företag tvingar användare på sina plattformar att samtycka till analysen av deras offentliga profiler och innehåll för att träna artificiell intelligens?--><!--{el}18. Τι πιστεύετε για τις εταιρείες που αναγκάζουν τους χρήστες στις πλατφόρμες τους να συναινέσουν στην ανάλυση των δημόσιων προφίλ και του περιεχομένου τους για την εκπαίδευση τεχνολογιών τεχνητής νοημοσύνης;--><!--{yu}18. 你點睇公司迫使佢哋平台上嘅用戶同意分析佢哋嘅公開個人檔案同內容，以培訓人工智能技術？--><!--{ja}18. 企業が自社のプラットフォーム上で、人工知能技術のトレーニングのために公開プロフィールやコンテンツの分析に同意するようユーザーに強制することについてどう思いますか?--><!--{kr}18. 기업이 자사 플랫폼에서 사용자에게 공개 프로필과 콘텐츠를 분석하여 인공지능 기술을 훈련하는 데 동의하도록 강요하는 것에 대해 어떻게 생각하십니까?-->
+                        </h3>
+                        <p style="color: #ABABAB; font-style: italic;">
+                            Select only one option.
+                            <!--{ca}Selecciona només una opció--><!--{da}Vælg kun én mulighed.--><!--{de}Wählen Sie nur eine Option aus.--><!--{es}Selecciona sólo una opción.--><!--{fr}Sélectionnez une seule option.--><!--{mi}Tīpakohia kotahi anake te kōwhiringa.--><!--{nl}Selecteer slechts één optie.--><!--{nb}Velg bare ett alternativ.--><!--{pt}Selecione apenas uma opção.--><!--{fi}Valitse vain yksi vaihtoehto.--><!--{sv}Välj bara ett alternativ.--><!--{el}Επιλέξτε μόνο μία επιλογή.--><!--{yu}只揀一個選項。--><!--{ja}オプションを 1 つだけ選択してください。--><!--{kr}옵션을 하나만 선택하세요.-->
+                        </p>
+                        <input type="radio" name="18" id="q18-a1" value="Yes">
+                        <label for="q18-a1">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Yes
+                                <!--{ca}Sí--><!--{da}Ja--><!--{de}Ja--><!--{es}Sí--><!--{fr}Oui--><!--{mi}Ae--><!--{nl}Ja--><!--{nb}Ja--><!--{pt}--><!--{fi}Kyllä--><!--{sv}Ja--><!--{el}Ναί--><!--{yu}係--><!--{ja}はい--><!--{kr}예-->
+                            </span>
+                        </label>
+                        <input type="radio" name="18" id="q18-a2" value="No">
+                        <label for="q18-a2">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                No
+                                <!--{ca}No--><!--{da}Nej--><!--{de}Nein--><!--{es}No--><!--{fr}Non--><!--{mi}Kao--><!--{nl}Nee--><!--{nb}Nei--><!--{pt}Não--><!--{fi}Ei--><!--{sv}Nej--><!--{el}Οχι--><!--{yu}唔得--><!--{ja}いいえ--><!--{kr}아니요-->
+                            </span>
+                        </label>
+                        <input type="radio" name="18" id="q18-a3" value="Not sure">
+                        <label for="q18-a3">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Not sure
+                                <!--{ca}No n'estic segur--><!--{da}Ikke sikker--><!--{de}Nicht sicher--><!--{es}No estoy seguro--><!--{fr}Pas sûr--><!--{mi}Kaore i tino mohio--><!--{nl}Ik weet het niet zeker--><!--{nb}Ikke sikker--><!--{pt}Não tenho certeza--><!--{fi}En ole varma--><!--{sv}Inte säker--><!--{el}Δεν είμαι σίγουρος/η--><!--{yu}唔肯定--><!--{ja}わからない--><!--{kr}확실하지 않음-->
+                            </span>
+                        </label>
+                    </div>
+                    <!--Separator-->
+                    <div style="height: 20px; clear: both;"></div>
+                    <div style="width: 100%; height: 1px; background: #ABABAB;"></div>
+                    <div style="clear: both;"></div>
+                    <!--Separator-->
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h3>
+                            19. Do you wish that privacy policies and terms of service for mobile applications were more human-friendly and comprehensible?
+                            <!--{ca}19. T'agradaria que les polítiques de privadesa i els termes del servei de les aplicacions mòbils fossin més fàcils d'entendre i comprensibles per a les persones?--><!--{da}19. Ville du ønske, at privatlivspolitikker og servicevilkår for mobilapplikationer var mere brugervenlige og forståelige?--><!--{de}19. Wünschen Sie sich, dass Datenschutzrichtlinien und Nutzungsbedingungen für mobile Anwendungen benutzerfreundlicher und verständlicher wären?--><!--{es}19. ¿Desea que las políticas de privacidad y los términos de servicio de las aplicaciones móviles fueran más fáciles de entender y de usar?--><!--{fr}19. Souhaitez-vous que les politiques de confidentialité et les conditions d’utilisation des applications mobiles soient plus conviviales et compréhensibles ?--><!--{mi}19. Kei te pirangi koe kia pai ake nga kaupapa here tūmataiti me nga tikanga o te ratonga mo nga tono pūkoro kia pai ake te tangata me te maarama?--><!--{nl}19. Wilt u dat het privacybeleid en de servicevoorwaarden voor mobiele applicaties gebruiksvriendelijker en begrijpelijker zijn?--><!--{nb}19. Skulle du ønske at personvernreglene og tjenestevilkårene for mobilapplikasjoner var mer brukervennlige og forståelige?--><!--{pt}19. Você gostaria que as políticas de privacidade e os termos de serviço para aplicativos móveis fossem mais amigáveis ​​e compreensíveis?--><!--{fi}19. Toivoisitko, että mobiilisovellusten tietosuojakäytännöt ja käyttöehdot olisivat ihmisystävällisempiä ja ymmärrettävämpiä?--><!--{sv}19. Önskar du att integritetspolicyer och användarvillkor för mobilapplikationer var mer användarvänliga och lättförståeliga?--><!--{el}19. Επιθυμείτε οι πολιτικές απορρήτου και οι όροι παροχής υπηρεσιών για εφαρμογές για κινητά να είναι πιο φιλικοί προς τον άνθρωπο και κατανοητοί;--><!--{yu}19. 你係咪希望流動應用程式嘅私隱政策同服務條款更加人性化同易於理解？--><!--{ja}19. モバイル アプリケーションのプライバシー ポリシーと利用規約が、より人間に優しく、理解しやすいものになることを望みますか?--><!--{kr}19. 모바일 애플리케이션의 개인정보 보호정책과 서비스 약관이 더 인간 친화적이고 이해하기 쉬웠으면 좋겠다고 생각하시나요?-->
+                        </h3>
+                        <p style="color: #ABABAB; font-style: italic;">
+                            Select only one option.
+                            <!--{ca}Selecciona només una opció--><!--{da}Vælg kun én mulighed.--><!--{de}Wählen Sie nur eine Option aus.--><!--{es}Selecciona sólo una opción.--><!--{fr}Sélectionnez une seule option.--><!--{mi}Tīpakohia kotahi anake te kōwhiringa.--><!--{nl}Selecteer slechts één optie.--><!--{nb}Velg bare ett alternativ.--><!--{pt}Selecione apenas uma opção.--><!--{fi}Valitse vain yksi vaihtoehto.--><!--{sv}Välj bara ett alternativ.--><!--{el}Επιλέξτε μόνο μία επιλογή.--><!--{yu}只揀一個選項。--><!--{ja}オプションを 1 つだけ選択してください。--><!--{kr}옵션을 하나만 선택하세요.-->
+                        </p>
+                        <input type="radio" name="19" id="q19-a1" value="Yes">
+                        <label for="q19-a1">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Yes
+                                <!--{ca}Sí--><!--{da}Ja--><!--{de}Ja--><!--{es}Sí--><!--{fr}Oui--><!--{mi}Ae--><!--{nl}Ja--><!--{nb}Ja--><!--{pt}--><!--{fi}Kyllä--><!--{sv}Ja--><!--{el}Ναί--><!--{yu}係--><!--{ja}はい--><!--{kr}예-->
+                            </span>
+                        </label>
+                        <input type="radio" name="19" id="q19-a2" value="No">
+                        <label for="q19-a2">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                No
+                                <!--{ca}No--><!--{da}Nej--><!--{de}Nein--><!--{es}No--><!--{fr}Non--><!--{mi}Kao--><!--{nl}Nee--><!--{nb}Nei--><!--{pt}Não--><!--{fi}Ei--><!--{sv}Nej--><!--{el}Οχι--><!--{yu}唔得--><!--{ja}いいえ--><!--{kr}아니요-->
+                            </span>
+                        </label>
+                        <input type="radio" name="19" id="q19-a3" value="Not sure">
+                        <label for="q19-a3">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Not sure
+                                <!--{ca}No n'estic segur--><!--{da}Ikke sikker--><!--{de}Nicht sicher--><!--{es}No estoy seguro--><!--{fr}Pas sûr--><!--{mi}Kaore i tino mohio--><!--{nl}Ik weet het niet zeker--><!--{nb}Ikke sikker--><!--{pt}Não tenho certeza--><!--{fi}En ole varma--><!--{sv}Inte säker--><!--{el}Δεν είμαι σίγουρος/η--><!--{yu}唔肯定--><!--{ja}わからない--><!--{kr}확실하지 않음-->
+                            </span>
+                        </label>
+                    </div>
+                    <!--Separator-->
+                    <div style="height: 20px; clear: both;"></div>
+                    <div style="width: 100%; height: 1px; background: #ABABAB;"></div>
+                    <div style="clear: both;"></div>
+                    <!--Separator-->
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h3>
+                            20. Do you think social media companies should be more conscious of their resource choices and pledge to be environmentally friendly?
+                            <!--{ca}20. Creus que les empreses de xarxes socials haurien de ser més conscients de les seves eleccions de recursos i comprometre's a ser respectuoses amb el medi ambient?--><!--{da}20. Synes du, at sociale medievirksomheder burde være mere bevidste om deres ressourcevalg og forpligte sig til at være miljøvenlige?--><!--{de}20. Sind Sie der Meinung, dass Social-Media-Unternehmen bei der Auswahl ihrer Ressourcen bewusster vorgehen und sich zu umweltfreundlichem Verhalten verpflichten sollten?--><!--{es}20. ¿Crees que las empresas de redes sociales deberían ser más conscientes de sus elecciones de recursos y comprometerse a ser respetuosas con el medio ambiente?--><!--{fr}20. Pensez-vous que les entreprises de médias sociaux devraient être plus conscientes de leurs choix en matière de ressources et s’engager à être respectueuses de l’environnement ?--><!--{mi}20. Ki to whakaaro me kaha ake te mohio o nga kamupene pāpāho pāpori ki a raatau whiringa rauemi me te oati kia noho pai ki te taiao?--><!--{nl}20. Vindt u dat socialemediabedrijven bewuster moeten omgaan met de keuze van hun hulpbronnen en moeten beloven milieuvriendelijk te zijn?--><!--{nb}20. Synes du at sosiale medieselskaper burde være mer bevisste på ressursvalgene sine og forplikte seg til å være miljøvennlige?--><!--{pt}20. Você acha que as empresas de mídia social deveriam ser mais conscientes sobre suas escolhas de recursos e se comprometer a serem ecologicamente corretas?--><!--{fi}20. Pitäisikö mielestäsi some-yritysten olla tietoisempia resurssivalinnoistaan ​​ja sitoutua ympäristöystävällisyyteen?--><!--{sv}20. Tycker du att sociala medieföretag borde vara mer medvetna om sina resursval och lova att vara miljövänliga?--><!--{el}20. Πιστεύετε ότι οι εταιρείες μέσων κοινωνικής δικτύωσης θα πρέπει να είναι πιο συνειδητές ως προς τις επιλογές πόρων που επιλέγουν και να δεσμευτούν να είναι φιλικές προς το περιβάλλον;--><!--{yu}20. 你覺得社交媒體公司係咪應該更加注意佢哋嘅資源選擇，同埋承諾要環保？--><!--{ja}20. ソーシャル メディア企業はリソースの選択をより意識し、環境に優しい行動をとることを誓うべきだと思いますか?--><!--{kr}20. 소셜 미디어 회사들이 자원 선택에 더욱 주의를 기울여야 하며 환경 친화적인 기업으로 거듭나겠다고 약속해야 한다고 생각하십니까?-->
+                        </h3>
+                        <p style="color: #ABABAB; font-style: italic;">
+                            Select only one option.
+                            <!--{ca}Selecciona només una opció--><!--{da}Vælg kun én mulighed.--><!--{de}Wählen Sie nur eine Option aus.--><!--{es}Selecciona sólo una opción.--><!--{fr}Sélectionnez une seule option.--><!--{mi}Tīpakohia kotahi anake te kōwhiringa.--><!--{nl}Selecteer slechts één optie.--><!--{nb}Velg bare ett alternativ.--><!--{pt}Selecione apenas uma opção.--><!--{fi}Valitse vain yksi vaihtoehto.--><!--{sv}Välj bara ett alternativ.--><!--{el}Επιλέξτε μόνο μία επιλογή.--><!--{yu}只揀一個選項。--><!--{ja}オプションを 1 つだけ選択してください。--><!--{kr}옵션을 하나만 선택하세요.-->
+                        </p>
+                        <input type="radio" name="20" id="q20-a1" value="Yes">
+                        <label for="q20-a1">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Yes
+                                <!--{ca}Sí--><!--{da}Ja--><!--{de}Ja--><!--{es}Sí--><!--{fr}Oui--><!--{mi}Ae--><!--{nl}Ja--><!--{nb}Ja--><!--{pt}--><!--{fi}Kyllä--><!--{sv}Ja--><!--{el}Ναί--><!--{yu}係--><!--{ja}はい--><!--{kr}예-->
+                            </span>
+                        </label>
+                        <input type="radio" name="20" id="q20-a2" value="No">
+                        <label for="q20-a2">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                No
+                                <!--{ca}No--><!--{da}Nej--><!--{de}Nein--><!--{es}No--><!--{fr}Non--><!--{mi}Kao--><!--{nl}Nee--><!--{nb}Nei--><!--{pt}Não--><!--{fi}Ei--><!--{sv}Nej--><!--{el}Οχι--><!--{yu}唔得--><!--{ja}いいえ--><!--{kr}아니요-->
+                            </span>
+                        </label>
+                        <input type="radio" name="20" id="q20-a3" value="Not sure">
+                        <label for="q20-a3">
+                            <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
+                                Not sure
+                                <!--{ca}No n'estic segur--><!--{da}Ikke sikker--><!--{de}Nicht sicher--><!--{es}No estoy seguro--><!--{fr}Pas sûr--><!--{mi}Kaore i tino mohio--><!--{nl}Ik weet het niet zeker--><!--{nb}Ikke sikker--><!--{pt}Não tenho certeza--><!--{fi}En ole varma--><!--{sv}Inte säker--><!--{el}Δεν είμαι σίγουρος/η--><!--{yu}唔肯定--><!--{ja}わからない--><!--{kr}확실하지 않음-->
+                            </span>
+                        </label>
+                    </div>
+                    <div style="height: 20px; clear: both;"></div>
+                </div>
+                <br>
+                <br>
+                <div class="container" style="width: calc(100% - 40px); max-width: 710px; border-radius: 20px; overflow: hidden; height: auto; margin-top: 20px;">
+                    <div style="width: calc(100% - 40px); text-align: left;">
+                        <h3>
+                            I'm working on a new kind of social platform made for real people, and users can hop on under an invite-basis. Would you like to subscribe to know the latest on my app, get invited to test it and learn when it’s released? If so, just leave your email below.
+                            <!--{ca}Estic treballant en un nou tipus de plataforma social feta per a gent real, i els usuaris poden accedir-hi per invitació. Voleu subscriure-us per conèixer les últimes novetats de la meva aplicació, rebre una invitació per provar-la i saber quan es llançarà? Si és així, només cal que deixeu el vostre correu electrònic a continuació.--><!--{da}Jeg arbejder på en ny slags social platform lavet til rigtige mennesker, og brugerne kan tilmelde sig via invitation. Vil du abonnere for at få det seneste om min app, blive inviteret til at teste den og lære, hvornår den udgives? Hvis ja, skal du blot efterlade din e-mailadresse nedenfor.--><!--{de}Ich arbeite an einer neuen Art von Social-Media-Plattform für echte Menschen, der Nutzer auf Einladung beitreten können. Möchten Sie sich anmelden, um über Neuigkeiten zu meiner App informiert zu werden, sie testen zu dürfen und zu erfahren, wann sie veröffentlicht wird? Dann hinterlassen Sie unten einfach Ihre E-Mail-Adresse.--><!--{es}Estoy trabajando en una nueva plataforma social diseñada para personas reales, a la que los usuarios pueden unirse por invitación. ¿Te gustaría suscribirte para estar al tanto de las últimas novedades de mi aplicación, recibir una invitación para probarla y enterarte de su lanzamiento? Si es así, deja tu correo electrónico abajo.--><!--{fr}Je travaille sur une plateforme sociale d'un genre nouveau, conçue pour les personnes réelles, et accessible sur invitation. Souhaitez-vous vous abonner pour être informé(e) des dernières nouveautés de mon application, être invité(e) à la tester et être informé(e) de sa sortie ? Laissez-nous votre adresse e-mail ci-dessous.--><!--{mi}Kei te mahi ahau i runga i tetahi momo papaapori hou i hangaia mo nga tangata pono, ka taea e nga kaiwhakamahi te eke ki runga i te kaupapa tono-a-iwi. Kei te pirangi koe ki te ohauru kia mohio koe ki nga mea hou mo taku taupānga, me tono koe ki te whakamatau me te ako ina tukuna? Ki te pera, waiho noa to imeera ki raro.--><!--{nl}Ik werk aan een nieuw soort sociaal platform voor echte mensen, waar gebruikers op uitnodiging gebruik van kunnen maken. Wil je je abonneren om op de hoogte te blijven van de laatste ontwikkelingen rond mijn app, uitgenodigd worden om hem te testen en te horen wanneer hij uitkomt? Laat dan hieronder je e-mailadres achter.--><!--{nb}Jeg jobber med en ny type sosial plattform laget for ekte mennesker, og brukere kan bli med på invitasjon. Vil du abonnere for å få vite det siste om appen min, bli invitert til å teste den og lære når den lanseres? I så fall er det bare å legge igjen e-postadressen din nedenfor.--><!--{pt}Estou trabalhando em um novo tipo de plataforma social feita para pessoas reais, e os usuários podem participar mediante convite. Gostaria de se inscrever para saber as novidades do meu aplicativo, receber convites para testá-lo e saber quando ele for lançado? Se sim, deixe seu e-mail abaixo.--><!--{fi}Työstän uudenlaista sosiaalista alustaa, joka on tehty oikeille ihmisille, ja käyttäjät voivat liittyä mukaan kutsusta. Haluatko tilata uutiskirjeeni saadaksesi uusimmat tiedot sovelluksestani, kutsun testata sitä ja kuullaksesi, milloin se julkaistaan? Jos haluat, jätä sähköpostiosoitteesi alle.--><!--{sv}Jag jobbar på en ny typ av social plattform gjord för riktiga människor, och användare kan gå med via inbjudan. Vill du prenumerera för att få veta det senaste om min app, bli inbjuden att testa den och lära dig när den släpps? Om så är fallet, lämna bara din e-postadress nedan.--><!--{el}Εργάζομαι σε ένα νέο είδος κοινωνικής πλατφόρμας φτιαγμένης για πραγματικούς ανθρώπους και οι χρήστες μπορούν να συνδεθούν μέσω πρόσκλησης. Θα θέλατε να εγγραφείτε για να μαθαίνετε τα τελευταία νέα για την εφαρμογή μου, να λάβετε πρόσκληση να τη δοκιμάσετε και να μάθετε πότε θα κυκλοφορήσει; Αν ναι, απλώς αφήστε το email σας παρακάτω.--><!--{yu}我喺度研究緊一個新嘅社交平台，係為真人而設，而用戶可以喺邀請下加入。你想唔想訂閱我個應用程式嘅最新資訊，受邀測試同埋了解佢幾時發佈？如果係，只需要喺下面留低你嘅電郵。--><!--{ja}リアルな人々のための新しいソーシャルプラットフォームを開発中です。ユーザーは招待制で参加できます。アプリの最新情報やテストへの招待、リリース情報を受け取るために登録しませんか？もしよろしければ、下記にメールアドレスを入力してください。--><!--{kr}저는 실제 사람들을 위한 새로운 종류의 소셜 플랫폼을 개발 중이며, 사용자들은 초대를 통해 참여할 수 있습니다. 제 앱에 대한 최신 소식을 받아보고, 테스트 초대를 받고, 출시 소식을 받아보고 싶으시다면 구독하시겠습니까? 구독을 원하시면 아래에 이메일 주소를 남겨주세요.-->
+                        </h3>
+                        <p style="color: #ABABAB; font-style: italic;">
+                            Type an email address
+                            <!--{ca}Escriu una adreça electrònica--><!--{da}Skriv en e-mailadresse--><!--{de}Geben Sie eine E-Mail-Adresse ein--><!--{es}Escribe una dirección de correo electrónico--><!--{fr}Tapez une adresse e-mail--><!--{mi}Patohia he wahitau imeera--><!--{nl}Typ een e-mailadres--><!--{nb}Skriv inn en e-postadresse--><!--{pt}Digite um endereço de e-mail--><!--{fi}Kirjoita sähköpostiosoite--><!--{sv}Skriv en e-postadress--><!--{el}Πληκτρολογήστε μια διεύθυνση ηλεκτρονικού ταχυδρομείου--><!--{yu}輸入電郵地址--><!--{ja}メールアドレスを入力してください--><!--{kr}이메일 주소를 입력하세요-->
+                        </p>
+                        <input type="email" name="email" id="q21" placeholder="you@example.com">
+                    </div>
+                    <div style="height: 20px; clear: both;"></div>
+                </div>
+                <br>
+                <br>
+                <div style="width: calc(100% - 40px); max-width: 710px;">
+                    <p style="color: #ABABAB;">
+                        © manuel zarroca － 2025
+                    </p>
+                </div>
+                <div style="height: 110px; clear: both;"></div>
+            </center>
+                <div style="width: 100%; height: 100%; position: fixed; position: -webkit-fixed; top: 0px; left: 0px; background: #00000050; transition: linear 100ms; opacity: 0; z-index: -10;" id="o-lang"></div>
+                <div class="cont2" style="width: 100%; height: 70px; position: fixed; position: -webkit-fixed; bottom: 0px; box-shadow: 0px -10px 20px rgba(0 0 0 / 15%);  z-index: 1000;">
+                    <center>
+                        <div style="width: calc(100% - 40px); max-width: 710px;">
+                            <p style="color: #ABABAB; font-size: 15px; font-weight: 15px; text-align: left; margin-top: 0px; line-height: 70px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer;" id="lang-m-t">
+                                English
+                            </p>
+                            <button type="submit" disabled id="submit">
+                                Send response
+                                <!--{ca}Enviar resposta--><!--{da}Send svar--><!--{de}Antwort senden--><!--{es}Enviar respuesta--><!--{fr}Envoyer réponse--><!--{mi}Tuku whakautu--><!--{nl}Reactie verzenden--><!--{nb}Send svar--><!--{pt}Enviar resposta--><!--{fi}Lähetä vastaus--><!--{sv}Skicka svar--><!--{el}Αποστολή απάντησης--><!--{yu}發送回應--><!--{ja}応答を送信--><!--{kr}응답 보내기-->
+                            </button>
+                        </div>
+                    </center>
+                </div>
+                <div class="container" style="width: 100%; height: auto; position: fixed; position: -webkit-fixed; bottom: 70px; box-shadow: 0px -10px 20px rgba(0 0 0 / 15%); overflow: hidden; transition: linear 100ms; z-index: -10; opacity: 0;" id="lang-m">
+                    <center>
+                        <div style="width: calc(100% - 40px); max-width: 710px;">
+                            <div style="height: 20px;"></div>
+                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-ca">
+                                Català
+                            </h3>
+                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-da">
+                                Dansk
+                            </h3>
+                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-de">
+                                Deutsch
+                            </h3>
+                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-en">
+                                English
+                            </h3>
+                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-es">
+                                Español
+                            </h3>
+                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-fr">
+                                Français
+                            </h3>
+                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-mi">
+                                Māori
+                            </h3>
+                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-nl">
+                                Nederlands
+                            </h3>
+                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-nb">
+                                Norsk bokmål
+                            </h3>
+                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-pt">
+                                Português
+                            </h3>
+                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-fi">
+                                Suomi
+                            </h3>
+                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-sv">
+                                Svenska
+                            </h3>
+                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-el">
+                                Ελληνικά
+                            </h3>
+                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-yu">
+                                廣東話
+                            </h3>
+                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-ja">
+                                日本語
+                            </h3>
+                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-kr">
+                                한국어
+                            </h3>
+                        </div>
+                    </center>
+                </div>
+        </form>
+        <script>
+            var tran = new Translater();
+            if (tran.getLang() === "default") {
+                tran.setLang('en');
+                document.querySelector("#lang-m-t").innerHTML = "English";
+            }
+
+            if (tran.getLang() === "ca") {
+                document.querySelector("#lang-m-t").innerHTML = "Català";
+            }
+
+            if (tran.getLang() === "da") {
+                document.querySelector("#lang-m-t").innerHTML = "Dansk";
+            }
+
+            if (tran.getLang() === "de") {
+                document.querySelector("#lang-m-t").innerHTML = "Deutsch";
+            }
+
+            if (tran.getLang() === "es") {
+                document.querySelector("#lang-m-t").innerHTML = "Español";
+            }
+
+            if (tran.getLang() === "fr") {
+                document.querySelector("#lang-m-t").innerHTML = "Français";
+            }
+
+            if (tran.getLang() === "mi") {
+                document.querySelector("#lang-m-t").innerHTML = "Māori";
+            }
+
+            if (tran.getLang() === "nl") {
+                document.querySelector("#lang-m-t").innerHTML = "Nederlands";
+            }
+
+            if (tran.getLang() === "nb") {
+                document.querySelector("#lang-m-t").innerHTML = "Norsk bokmål";
+            }
+
+            if (tran.getLang() === "pt") {
+                document.querySelector("#lang-m-t").innerHTML = "Português";
+            }
+
+            if (tran.getLang() === "fi") {
+                document.querySelector("#lang-m-t").innerHTML = "Suomi";
+            }
+
+            if (tran.getLang() === "sv") {
+                document.querySelector("#lang-m-t").innerHTML = "Svenska";
+            }
+
+            if (tran.getLang() === "el") {
+                document.querySelector("#lang-m-t").innerHTML = "Ελληνικά";
+            }
+
+            if (tran.getLang() === "yu") {
+                document.querySelector("#lang-m-t").innerHTML = "廣東話";
+            }
+
+            if (tran.getLang() === "ja") {
+                document.querySelector("#lang-m-t").innerHTML = "日本語";
+            }
+
+            if (tran.getLang() === "kr") {
+                document.querySelector("#lang-m-t").innerHTML = "한국어";
+            }
+
+            document.querySelector("#lang-m-t").addEventListener("click", function() {
+                document.querySelector("#lang-m").style.zIndex = "1000";
+                document.querySelector("#lang-m").style.opacity = "1";
+                document.querySelector("#o-lang").style.zIndex = "1";
+                document.querySelector("#o-lang").style.opacity = "1";
+            });
+
+            document.querySelector("#o-lang").addEventListener("click", function() {
+                document.querySelector("#lang-m").style.zIndex = "-10";
+                document.querySelector("#lang-m").style.opacity = "0";
+                document.querySelector("#o-lang").style.zIndex = "-10";
+                document.querySelector("#o-lang").style.opacity = "0";
+            });
+
+            document.querySelector("#lang-en").addEventListener("click", function() {
+                document.querySelector("#lang-m").style.zIndex = "-10";
+                document.querySelector("#lang-m").style.opacity = "0";
+                document.querySelector("#o-lang").style.zIndex = "-10";
+                document.querySelector("#o-lang").style.opacity = "0";
+                document.querySelector("#lang-m-t").innerHTML = "English";
+                tran.setLang("en");
+            });
+
+            document.querySelector("#lang-ca").addEventListener("click", function() {
+                document.querySelector("#lang-m").style.zIndex = "-10";
+                document.querySelector("#lang-m").style.opacity = "0";
+                document.querySelector("#o-lang").style.zIndex = "-10";
+                document.querySelector("#o-lang").style.opacity = "0";
+                document.querySelector("#lang-m-t").innerHTML = "Català";
+                tran.setLang("ca");
+            });
+
+            document.querySelector("#lang-da").addEventListener("click", function() {
+                document.querySelector("#lang-m").style.zIndex = "-10";
+                document.querySelector("#lang-m").style.opacity = "0";
+                document.querySelector("#o-lang").style.zIndex = "-10";
+                document.querySelector("#o-lang").style.opacity = "0";
+                document.querySelector("#lang-m-t").innerHTML = "Dansk";
+                tran.setLang("da");
+            });
+
+            document.querySelector("#lang-de").addEventListener("click", function() {
+                document.querySelector("#lang-m").style.zIndex = "-10";
+                document.querySelector("#lang-m").style.opacity = "0";
+                document.querySelector("#o-lang").style.zIndex = "-10";
+                document.querySelector("#o-lang").style.opacity = "0";
+                document.querySelector("#lang-m-t").innerHTML = "Deutsch";
+                tran.setLang("de");
+            });
+
+            document.querySelector("#lang-es").addEventListener("click", function() {
+                document.querySelector("#lang-m").style.zIndex = "-10";
+                document.querySelector("#lang-m").style.opacity = "0";
+                document.querySelector("#o-lang").style.zIndex = "-10";
+                document.querySelector("#o-lang").style.opacity = "0";
+                document.querySelector("#lang-m-t").innerHTML = "Español";
+                tran.setLang("es");
+            });
+
+            document.querySelector("#lang-fr").addEventListener("click", function() {
+                document.querySelector("#lang-m").style.zIndex = "-10";
+                document.querySelector("#lang-m").style.opacity = "0";
+                document.querySelector("#o-lang").style.zIndex = "-10";
+                document.querySelector("#o-lang").style.opacity = "0";
+                document.querySelector("#lang-m-t").innerHTML = "Français";
+                tran.setLang("fr");
+            });
+
+            document.querySelector("#lang-mi").addEventListener("click", function() {
+                document.querySelector("#lang-m").style.zIndex = "-10";
+                document.querySelector("#lang-m").style.opacity = "0";
+                document.querySelector("#o-lang").style.zIndex = "-10";
+                document.querySelector("#o-lang").style.opacity = "0";
+                document.querySelector("#lang-m-t").innerHTML = "Māori";
+                tran.setLang("mi");
+            });
+
+            document.querySelector("#lang-nl").addEventListener("click", function() {
+                document.querySelector("#lang-m").style.zIndex = "-10";
+                document.querySelector("#lang-m").style.opacity = "0";
+                document.querySelector("#o-lang").style.zIndex = "-10";
+                document.querySelector("#o-lang").style.opacity = "0";
+                document.querySelector("#lang-m-t").innerHTML = "Nederlands";
+                tran.setLang("nl");
+            });
+
+            document.querySelector("#lang-nb").addEventListener("click", function() {
+                document.querySelector("#lang-m").style.zIndex = "-10";
+                document.querySelector("#lang-m").style.opacity = "0";
+                document.querySelector("#o-lang").style.zIndex = "-10";
+                document.querySelector("#o-lang").style.opacity = "0";
+                document.querySelector("#lang-m-t").innerHTML = "Norsk bokmål";
+                tran.setLang("nb");
+            });
+
+            document.querySelector("#lang-pt").addEventListener("click", function() {
+                document.querySelector("#lang-m").style.zIndex = "-10";
+                document.querySelector("#lang-m").style.opacity = "0";
+                document.querySelector("#o-lang").style.zIndex = "-10";
+                document.querySelector("#o-lang").style.opacity = "0";
+                document.querySelector("#lang-m-t").innerHTML = "Português";
+                tran.setLang("pt");
+            });
+
+            document.querySelector("#lang-fi").addEventListener("click", function() {
+                document.querySelector("#lang-m").style.zIndex = "-10";
+                document.querySelector("#lang-m").style.opacity = "0";
+                document.querySelector("#o-lang").style.zIndex = "-10";
+                document.querySelector("#o-lang").style.opacity = "0";
+                document.querySelector("#lang-m-t").innerHTML = "Suomi";
+                tran.setLang("fi");
+            });
+
+            document.querySelector("#lang-sv").addEventListener("click", function() {
+                document.querySelector("#lang-m").style.zIndex = "-10";
+                document.querySelector("#lang-m").style.opacity = "0";
+                document.querySelector("#o-lang").style.zIndex = "-10";
+                document.querySelector("#o-lang").style.opacity = "0";
+                document.querySelector("#lang-m-t").innerHTML = "Svenska";
+                tran.setLang("sv");
+            });
+
+            document.querySelector("#lang-el").addEventListener("click", function() {
+                document.querySelector("#lang-m").style.zIndex = "-10";
+                document.querySelector("#lang-m").style.opacity = "0";
+                document.querySelector("#o-lang").style.zIndex = "-10";
+                document.querySelector("#o-lang").style.opacity = "0";
+                document.querySelector("#lang-m-t").innerHTML = "Ελληνικά";
+                tran.setLang("el");
+            });
+
+            document.querySelector("#lang-yu").addEventListener("click", function() {
+                document.querySelector("#lang-m").style.zIndex = "-10";
+                document.querySelector("#lang-m").style.opacity = "0";
+                document.querySelector("#o-lang").style.zIndex = "-10";
+                document.querySelector("#o-lang").style.opacity = "0";
+                document.querySelector("#lang-m-t").innerHTML = "廣東話";
+                tran.setLang("yu");
+            });
+
+            document.querySelector("#lang-ja").addEventListener("click", function() {
+                document.querySelector("#lang-m").style.zIndex = "-10";
+                document.querySelector("#lang-m").style.opacity = "0";
+                document.querySelector("#o-lang").style.zIndex = "-10";
+                document.querySelector("#o-lang").style.opacity = "0";
+                document.querySelector("#lang-m-t").innerHTML = "日本語";
+                tran.setLang("ja");
+            });
+
+            document.querySelector("#lang-kr").addEventListener("click", function() {
+                document.querySelector("#lang-m").style.zIndex = "-10";
+                document.querySelector("#lang-m").style.opacity = "0";
+                document.querySelector("#o-lang").style.zIndex = "-10";
+                document.querySelector("#o-lang").style.opacity = "0";
+                document.querySelector("#lang-m-t").innerHTML = "한국어";
+                tran.setLang("kr");
+            });
+        </script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxPnL81ZIPWwyyKMjk9hvlkBNd5_FjNmycp3TUNvgSDBUktmcO_kJri1pjMLXtQ1NRm/exec'
+            const form = document.forms['metrosurvey']
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            })
+
+             document.querySelector("#submit").addEventListener("click", function() {
+                window.location.href = "https://manuelzarroca.github.io/metro/survey/d"
+            });
+        </script>
+        <script>
+            var anscount = 0;
+
+            let selectors = [];
+
+            for (let i = 1; i <= 20; i++) {
+                selectors.push(`[name="${i}"]`);
+            }
+
+            const questions = document.querySelectorAll(selectors.join(', '));
+
+            questions.forEach(function(element) {
+                element.addEventListener("click", function() {
+                    anscount = anscount + 1;
+                    console.log(anscount);
+                    if (anscount >= 20) {
+                        document.querySelector("#submit").removeAttribute("disabled");
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
