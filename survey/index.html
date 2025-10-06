@@ -1332,29 +1332,25 @@
             const form = document.forms['metrosurvey']
 
             form.addEventListener('submit', e => {
-    e.preventDefault();
+                e.preventDefault();
 
-    // Create a new FormData object
-    const formData = new FormData(form);
+                const formData = new FormData(form);
 
-    // For each group of checkboxes (all with the same name), join checked values
-    // Here, replace 'checkboxFieldName' with the name attribute of your checkboxes
-    const checkboxNames = ['2', '3', '4', '15']; // <-- replace with your checkbox field names
+                const checkboxNames = ['2', '3', '4', '15']; 
 
-    checkboxNames.forEach(name => {
-        // Get all checked checkboxes for this field
-        const checked = Array.from(form.querySelectorAll(`input[name="${name}"]:checked`)).map(cb => cb.value);
-        if (checked.length) {
-            formData.set(name, checked.join(', '));
-        } else {
-            formData.delete(name); // Remove if nothing checked
-        }
-    });
+                checkboxNames.forEach(name => {
+                    const checked = Array.from(form.querySelectorAll(`input[name="${name}"]:checked`)).map(cb => cb.value);
+                    if (checked.length) {
+                        formData.set(name, checked.join(', '));
+                    } else {
+                        formData.delete(name); // Remove if nothing checked
+                    }
+                });
 
-    fetch(scriptURL, { method: 'POST', body: formData })
-        .then(response => window.location.href = "https://manuelzarroca.github.io/metro/survey/d")
-        .catch(error => console.error('Error!', error.message))
-});
+                fetch(scriptURL, { method: 'POST', body: formData })
+                .then(response => window.location.href = "https://manuelzarroca.github.io/metro/survey/d")
+                .catch(error => console.error('Error!', error.message))
+            });
         </script>
         <script>
             var anscount = 0;
