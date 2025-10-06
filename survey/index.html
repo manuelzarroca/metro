@@ -1334,9 +1334,8 @@
             form.addEventListener('submit', e => {
                 e.preventDefault()
                 fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => console.log('Success!', response))
+                .then(response => window.location.href = "https://manuelzarroca.github.io/metro/survey/d")
                 .catch(error => console.error('Error!', error.message))
-                window.location.href = "https://manuelzarroca.github.io/metro/survey/d";
             })
         </script>
         <script>
