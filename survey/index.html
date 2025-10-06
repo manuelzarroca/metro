@@ -911,18 +911,18 @@
                             Select only one option.
                             <!--{ca}Selecciona només una opció--><!--{da}Vælg kun én mulighed.--><!--{de}Wählen Sie nur eine Option aus.--><!--{es}Selecciona sólo una opción.--><!--{fr}Sélectionnez une seule option.--><!--{mi}Tīpakohia kotahi anake te kōwhiringa.--><!--{nl}Selecteer slechts één optie.--><!--{nb}Velg bare ett alternativ.--><!--{pt}Selecione apenas uma opção.--><!--{fi}Valitse vain yksi vaihtoehto.--><!--{sv}Välj bara ett alternativ.--><!--{el}Επιλέξτε μόνο μία επιλογή.--><!--{yu}只揀一個選項。--><!--{ja}オプションを 1 つだけ選択してください。--><!--{kr}옵션을 하나만 선택하세요.-->
                         </p>
-                        <input type="radio" name="18" id="q18-a1" value="Yes">
+                        <input type="radio" name="18" id="q18-a1" value="I agree">
                         <label for="q18-a1">
                             <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
-                                Yes
-                                <!--{ca}Sí--><!--{da}Ja--><!--{de}Ja--><!--{es}Sí--><!--{fr}Oui--><!--{mi}Ae--><!--{nl}Ja--><!--{nb}Ja--><!--{pt}--><!--{fi}Kyllä--><!--{sv}Ja--><!--{el}Ναί--><!--{yu}係--><!--{ja}はい--><!--{kr}예-->
+                                I agree
+                                <!--{ca}Estic d'acord--><!--{da}Jeg er enig--><!--{de}Ich stimme zu--><!--{es}Estoy de acuerdo--><!--{fr}Je suis d'accord--><!--{mi}Whakaae ahau--><!--{nl}Ik ben het ermee eens--><!--{nb}Jeg er enig--><!--{pt}Concordo--><!--{fi}Olen samaa mieltä--><!--{sv}Jag håller med--><!--{el}Συμφωνώ--><!--{yu}我同意--><!--{ja}同意します--><!--{kr}나는 동의한다-->
                             </span>
                         </label>
-                        <input type="radio" name="18" id="q18-a2" value="No">
+                        <input type="radio" name="18" id="q18-a2" value="I disagree">
                         <label for="q18-a2">
                             <span style="line-height: 40px; margin-top: 0px; margin-left: 10px; margin-right: 10px;">
-                                No
-                                <!--{ca}No--><!--{da}Nej--><!--{de}Nein--><!--{es}No--><!--{fr}Non--><!--{mi}Kao--><!--{nl}Nee--><!--{nb}Nei--><!--{pt}Não--><!--{fi}Ei--><!--{sv}Nej--><!--{el}Οχι--><!--{yu}唔得--><!--{ja}いいえ--><!--{kr}아니요-->
+                                I disagree
+                                <!--{ca}No estic d'acord--><!--{da}Jeg er uenig--><!--{de}Ich bin nicht einverstanden--><!--{es}No estoy de acuerdo--><!--{fr}Je ne suis pas d'accord--><!--{mi}Kare au e whakaae--><!--{nl}Ik ben het er niet mee eens--><!--{nb}Jeg er uenig--><!--{pt}Discordo--><!--{fi}Olen eri mieltä--><!--{sv}Jag håller inte med--><!--{el}Διαφωνώ--><!--{yu}我唔同意--><!--{ja}私は同意しません--><!--{kr}나는 동의하지 않는다-->
                             </span>
                         </label>
                         <input type="radio" name="18" id="q18-a3" value="Not sure">
@@ -1336,11 +1336,8 @@
                 fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => console.log('Success!', response))
                 .catch(error => console.error('Error!', error.message))
+                window.location.href = "https://manuelzarroca.github.io/metro/survey/d";
             })
-
-             document.querySelector("#submit").addEventListener("click", function() {
-                window.location.href = "https://manuelzarroca.github.io/metro/survey/d"
-            });
         </script>
         <script>
             var anscount = 0;
