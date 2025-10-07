@@ -140,6 +140,13 @@
             background: #F6F6F6;
         }
 
+        .underline {
+            text-decoration-line: underline;
+            text-decoration-color: #00000020;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 2px;
+        }
+
         @media (prefers-color-scheme: dark) {
             body {
                 background-color: #151515;
@@ -160,6 +167,13 @@
 
             button[type=submit]:disabled {
                 background: #353535;
+            }
+
+            .underline {
+                text-decoration-line: underline;
+                text-decoration-color: #FFFFFF30;
+                text-decoration-thickness: 2px;
+                text-underline-offset: 2px;
             }
         }
     </style>
@@ -1036,7 +1050,7 @@
                 <div class="cont2" style="width: 100%; height: 70px; position: fixed; position: -webkit-fixed; bottom: 0px; box-shadow: 0px -10px 20px rgba(0 0 0 / 15%);  z-index: 1000;">
                     <center>
                         <div style="width: calc(100% - 40px); max-width: 710px;">
-                            <p style="color: #ABABAB; font-size: 15px; font-weight: 15px; text-align: left; margin-top: 0px; line-height: 70px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer;" id="lang-m-t">
+                            <p class="underline" style="color: #ABABAB; font-size: 15px; font-weight: 15px; text-align: left; margin-top: 0px; line-height: 70px; cursor: pointer;" id="lang-m-t">
                                 English
                             </p>
                             <button type="submit" disabled id="submit">
@@ -1050,52 +1064,52 @@
                     <center>
                         <div style="width: calc(100% - 40px); max-width: 710px;">
                             <div style="height: 20px;"></div>
-                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-ca">
+                            <h3 class="underline" style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-ca">
                                 Català
                             </h3>
-                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-da">
+                            <h3 class="underline" style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-da">
                                 Dansk
                             </h3>
-                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-de">
+                            <h3 class="underline" style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-de">
                                 Deutsch
                             </h3>
-                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-en">
+                            <h3 class="underline" style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-en">
                                 English
                             </h3>
-                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-es">
+                            <h3 class="underline" style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-es">
                                 Español
                             </h3>
-                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-fr">
+                            <h3 class="underline" style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-fr">
                                 Français
                             </h3>
-                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-mi">
+                            <h3 class="underline" style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-mi">
                                 Māori
                             </h3>
-                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-nl">
+                            <h3 class="underline" style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-nl">
                                 Nederlands
                             </h3>
-                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-nb">
+                            <h3 class="underline" style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-nb">
                                 Norsk bokmål
                             </h3>
-                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-pt">
+                            <h3 class="underline" style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-pt">
                                 Português
                             </h3>
-                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-fi">
+                            <h3 class="underline" style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-fi">
                                 Suomi
                             </h3>
-                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-sv">
+                            <h3 class="underline" style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-sv">
                                 Svenska
                             </h3>
-                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-el">
+                            <h3 class="underline" style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-el">
                                 Ελληνικά
                             </h3>
-                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-yu">
+                            <h3 class="underline" style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-yu">
                                 廣東話
                             </h3>
-                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-ja">
+                            <h3 class="underline" style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-ja">
                                 日本語
                             </h3>
-                            <h3 style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; text-decoration: underline 2px #00000020; text-underline-offset: 2px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-kr">
+                            <h3 class="underline" style="color: #ABABAB; font-weight: 15px; text-align: left; margin-top: 0px; cursor: pointer; display: inline-block; margin-right: 20px; margin-bottom: 20px; float: left;" id="lang-kr">
                                 한국어
                             </h3>
                         </div>
